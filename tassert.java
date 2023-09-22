@@ -28,7 +28,7 @@ public class tassert {
      populateAssertExp();
 
      try {
-      File fileJava = new File("test.java");
+      File fileJava = new File(args[0]);
       Scanner myReader = new Scanner(fileJava);
 
       while (myReader.hasNextLine()) {
