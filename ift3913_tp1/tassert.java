@@ -1,3 +1,5 @@
+package ift3913_tp1;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -8,6 +10,15 @@ import java.util.ArrayList;
 public class tassert {
 
     private static ArrayList<String> assertExp;
+    private static int countAssertExp;
+
+     public static void setCountAssertExp(int i) {
+         tassert.countAssertExp = i;
+     }
+
+     public static int getCountAssertExp() {
+         return countAssertExp;
+     }
 
     public static ArrayList<String> getAssertExp() {
         return assertExp;
@@ -23,7 +34,7 @@ public class tassert {
     // fail, assertArrayEquals, assertEquals, assertNotEquals, assertFalse, assertNotNull, assertNotSame
     // assertNull, assertSame, assertThat, assertThrows, assertTrue
 
-     int countAssertExp = 0;
+     setCountAssertExp(0);
 
      populateAssertExp();
 
@@ -42,7 +53,7 @@ public class tassert {
       }
 
       myReader.close();
-
+      setCountAssertExp(countAssertExp);
       System.out.println(countAssertExp);
       
     } catch (FileNotFoundException e) {
