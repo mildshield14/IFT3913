@@ -3,8 +3,10 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -20,6 +22,7 @@ public class tls {
     private static List<String[]> dataLines = new ArrayList<>();
     private static String packageName;
     private static String className;
+    private static boolean isFirstExecution = true;
 
     public static void setClassName(String classNames) {
         className = classNames;
@@ -63,7 +66,7 @@ public class tls {
                     setPackageName(package_name);
                 }
 
-                class_name = findWord("class", data);
+                class_name = findWord(" class ", data);
 
                 if (class_name != null) {
                     System.out.println("found");
@@ -133,16 +136,25 @@ public class tls {
 
     public static void givenDataArray_whenConvertToCSV_thenOutputCreated(List<String[]> dataLines) throws IOException {
         File csvOutputFile = new File("csv_file");
-    
-        try (PrintWriter pw = new PrintWriter(csvOutputFile)) {
-           
-                dataLines.stream()
-                        .map(tls::convertToCSV)
-                        .forEach(pw::println);
-            
+
+        // Check if it's the first execution
+        boolean isFirstExecutionLocal = isFirstExecution;
+
+        try (PrintWriter pw = new PrintWriter(new FileWriter(csvOutputFile, !isFirstExecutionLocal))) {
+            if (isFirstExecutionLocal) {
+                // If it's the first execution, overwrite the file
+                pw.write(""); // Truncate the file
+                isFirstExecution = false; // Update to indicate NOT first time
+            }
+
+            // inspo : https://stackoverflow.com/questions/3154488/how-do-i-iterate-through-the-files-in-a-directory-and-its-sub-directories-in-ja
+            dataLines.stream()
+                    .map(tls::convertToCSV)
+                    .forEach(pw::println);
         }
         assertTrue(csvOutputFile.exists());
-    }
+       }
+
     
 
     public static String escapeSpecialCharacters(String data) {
@@ -157,10 +169,21 @@ public class tls {
  // Used https://www.baeldung.com/java-csv for writing to CSV file
     public static void main(String[] args) throws IOException {
 
+        
        // Take folder comme entrée et extraire les données voulues
-       Path dir = Paths.get("lib/jfreechart-master/src/test/java/org/jfree/chart/title/TitleTest.java");
-
-       extractData(dir);
-       givenDataArray_whenConvertToCSV_thenOutputCreated(dataLines);
+       Path dir = Paths.get("lib/jfreechart-master/src/test/java/org/jfree/chart/title");
+       Files.walk(dir).forEach(path -> fileOrDirec(path, dir));
     }
+
+    public static void fileOrDirec(Path file, Path dir) {
+        if (file.toFile().isFile() && file.toString().endsWith(".java")) {
+            extractData(file);
+            try {
+                givenDataArray_whenConvertToCSV_thenOutputCreated(dataLines);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
 }
