@@ -1,3 +1,4 @@
+package ift3913_tp1;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
@@ -43,13 +44,13 @@ public class tls {
         return dataLines;
     }
 
-    public static void extractData(File file) {
+    public static void extractData(Path path) {
         
         try {
             String package_name="";
             String class_name="";
 
-            Scanner myReader = new Scanner(file);
+            Scanner myReader = new Scanner(path.toFile());
 
             while (myReader.hasNextLine() ) {
                 
@@ -76,7 +77,18 @@ public class tls {
             // now we will return all necessary data for CSV file writing
 
             List<String[]> toWriteInCSV = new ArrayList<>();
-            String[] row = {"title name", getPackageName(), getClassName(), "tloc", "tassert", "tcmp"};
+
+            String[] file_name = {path.toFile().toString()};
+            tassert.main(file_name);
+            String tassert_data=tassert.getCountAssertExp() + "";
+
+            String file_title= path.toFile().getName().toString();
+
+            if(path.toString().contains("/")){
+                file_title= "./" + file_title;
+            }
+
+            String[] row = {file_title, " " + getPackageName(), " " + getClassName(), " " + "tloc", " " + tassert_data, " " + "tcmp"};
             toWriteInCSV.add(row);
             
 
@@ -101,6 +113,7 @@ public class tls {
             line = line.replace(" ", "");
             line = line.replace("public", "");
             line = line.replace("{", "");
+            line = line.replace(";", "");
             return line;
         }
 
@@ -144,10 +157,10 @@ public class tls {
  // Used https://www.baeldung.com/java-csv for writing to CSV file
     public static void main(String[] args) throws IOException {
 
-        // Take folder comme entrée et extraire les données voulues
-        Path dir = Paths.get("lib/jfreechart-master/src/test/java/org/jfree/chart/title/TitleTest.java");
+       // Take folder comme entrée et extraire les données voulues
+       Path dir = Paths.get("lib/jfreechart-master/src/test/java/org/jfree/chart/title/TitleTest.java");
 
-       extractData(dir.toFile());
+       extractData(dir);
        givenDataArray_whenConvertToCSV_thenOutputCreated(dataLines);
     }
 }

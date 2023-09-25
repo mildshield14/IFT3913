@@ -1,1 +1,1 @@
-title name,org.jfree.chart.title;,TitleTest,tloc,tassert,tcmp
+./TitleTest.java, org.jfree.chart.title, TitleTest, tloc, 11, tcmp
