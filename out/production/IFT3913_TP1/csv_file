@@ -1,0 +1,6 @@
+./TextTitleTest.java, org.jfree.chart.title, TextTitleTest, tloc, 25, tcmp
+./CompositeTitleTest.java, org.jfree.chart.title, CompositeTitleTest, tloc, 19, tcmp
+./ShortTextTitleTest.java, org.jfree.chart.title, ShortTextTitleTest, tloc, 9, tcmp
+./ImageTitleTest.java, org.jfree.chart.title, ImageTitleTest, tloc, 0, tcmp
+./DateTitleTest.java, org.jfree.chart.title, DateTitleTest, tloc, 15, tcmp
+./TitleTest.java, org.jfree.chart.title, TitleTest, tloc, 11, tcmp

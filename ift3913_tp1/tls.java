@@ -1,6 +1,4 @@
 package ift3913_tp1;
-import static org.junit.Assert.assertTrue;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -16,6 +14,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.junit.Assert.assertTrue;
 
 public class tls {
 
@@ -62,15 +62,13 @@ public class tls {
                 package_name = findWord("package", data);
 
                 if (package_name != null) {
-                    System.out.println("found");
                     setPackageName(package_name);
                 }
 
                 class_name = findWord(" class ", data);
 
                 if (class_name != null) {
-                    System.out.println("found");
-                    setClassName(class_name);
+                   setClassName(class_name);
                 }
 
             }
@@ -134,8 +132,8 @@ public class tls {
                 .collect(Collectors.joining(","));
     }
 
-    public static void givenDataArray_whenConvertToCSV_thenOutputCreated(List<String[]> dataLines) throws IOException {
-        File csvOutputFile = new File("csv_file");
+    public static void givenDataArray_whenConvertToCSV_thenOutputCreated(List<String[]> dataLines, Path dir) throws IOException {
+        File csvOutputFile = (dir.toFile());
 
         // Check if it's the first execution
         boolean isFirstExecutionLocal = isFirstExecution;
@@ -168,22 +166,34 @@ public class tls {
 
  // Used https://www.baeldung.com/java-csv for writing to CSV file
     public static void main(String[] args) throws IOException {
+         if (args.length ==1) {
+             Files.walk(Path.of(args[0])).forEach(path -> fileOrDirec(path));
+       }else if (args.length==2){
+                // Take folder comme entrée et extraire les données voulues
+                Path dir = Paths.get(args[1]);
+                Files.walk(dir).forEach(path -> fileOrDirecCSV(path, Path.of(args[0])));
+            }
+        }
 
-        
-       // Take folder comme entrée et extraire les données voulues
-       Path dir = Paths.get("lib/jfreechart-master/src/test/java/org/jfree/chart/title");
-       Files.walk(dir).forEach(path -> fileOrDirec(path, dir));
-    }
 
-    public static void fileOrDirec(Path file, Path dir) {
+    public static void fileOrDirecCSV(Path file, Path dir) {
         if (file.toFile().isFile() && file.toString().endsWith(".java")) {
             extractData(file);
             try {
-                givenDataArray_whenConvertToCSV_thenOutputCreated(dataLines);
+                givenDataArray_whenConvertToCSV_thenOutputCreated(getDataLines(), dir);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
-    
+    public static void fileOrDirec( Path file) {
+        if (file.toFile().isFile() && file.toString().endsWith(".java")) {
+            extractData(file);
+
+            for (String[] rowData : dataLines) {
+                String line = String.join(", ", rowData);
+                System.out.println(line);
+            }
+        }
+    }
 }
