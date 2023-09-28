@@ -1,6 +1,26 @@
+package ift3913_tp1;
+
 import java.io.*;
 
 public class tloc {
+
+    private static boolean calledByTls = false;
+    private static  int countTlocExp;
+
+    public static void setCalledByTls(boolean calledByTLS) {
+        calledByTls = calledByTLS;
+    }
+    public static boolean getCalledbyTls() {
+        return calledByTls;
+    }
+
+    public static void setCountTlocExp(int i) {
+        tloc.countTlocExp = i;
+    }
+    public static int getCountTlocExp() {
+        return countTlocExp;
+    }
+
     public static void main(String[] args) {
 
         if (args.length != 1) {
@@ -9,8 +29,15 @@ public class tloc {
         }
         String nameSourceFile = args[0]; //argument de la fonction "countTloc"
         int tlocNum = countTloc(nameSourceFile);
-        System.out.println("TLOC: " + tlocNum);
+        setCountTlocExp(tlocNum);
+
+        if (!getCalledbyTls()){
+            System.out.println("TLOC: " + tlocNum);
+            setCalledByTls(false);
+        }
+
     }
+
     /* Le paramètre de cette fonction est le nom du fichier de test, obtenu depuis le terminal. Cette fonction
     * peut obtenir le nombre réel de lignes de code (hors commentaires et espaces)
     * */
@@ -31,4 +58,6 @@ public class tloc {
 
         return tlocNum;
     }
+
+
 }

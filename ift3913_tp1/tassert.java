@@ -11,6 +11,7 @@ public class tassert {
 
     private static ArrayList<String> assertExp;
     private static int countAssertExp;
+    private static boolean calledByTls;
 
      public static void setCountAssertExp(int i) {
          tassert.countAssertExp = i;
@@ -22,6 +23,10 @@ public class tassert {
 
     public static ArrayList<String> getAssertExp() {
         return assertExp;
+    }
+
+    public static void setCalledByTls(boolean calledByTls) {
+        tassert.calledByTls = calledByTls;
     }
 
     public static void setAssertExp(ArrayList<String> assertExpr) {
@@ -54,7 +59,12 @@ public class tassert {
 
       myReader.close();
       setCountAssertExp(countAssertExp);
-      System.out.println(countAssertExp);
+
+      if (calledByTls==false) {
+          System.out.println(countAssertExp);
+      }else{
+          calledByTls=false;
+      }
       
     } catch (FileNotFoundException e) {
       System.out.println("An error occurred.");
@@ -72,12 +82,13 @@ public class tassert {
         tempAssert.add("assertNotEquals");
         tempAssert.add("assertFalse");
         tempAssert.add("assertNotNull");
-        tempAssert.add("assertNotSame");    
+        tempAssert.add("assertNotSame");
         tempAssert.add("assertNull");
         tempAssert.add("assertSame");
         tempAssert.add("assertThat");
         tempAssert.add("assertThrows");
         tempAssert.add("assertTrue");
+        tempAssert.add("fail");
 
         setAssertExp(tempAssert);
 

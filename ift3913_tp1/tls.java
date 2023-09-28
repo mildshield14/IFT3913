@@ -80,6 +80,12 @@ public class tls {
             List<String[]> toWriteInCSV = new ArrayList<>();
 
             String[] file_name = {path.toFile().toString()};
+
+            tloc.setCalledByTls(true);
+            tloc.main(file_name);
+            String tloc_data=tloc.getCountTlocExp() + "";
+
+            tassert.setCalledByTls(true);
             tassert.main(file_name);
             String tassert_data=tassert.getCountAssertExp() + "";
 
@@ -89,7 +95,13 @@ public class tls {
                 file_title= "./" + file_title;
             }
 
-            String[] row = {file_title, " " + getPackageName(), " " + getClassName(), " " + "tloc", " " + tassert_data, " " + "tcmp"};
+            String tcmp_data="0";
+            if (Integer.parseInt(tloc_data)!=0 && Integer.parseInt(tassert_data)!=0){
+                tcmp_data=Integer.parseInt(tloc_data)/Integer.parseInt(tassert_data)+"";
+            }
+
+
+            String[] row = {file_title, " " + getPackageName(), " " + getClassName(), " " + tloc_data+ " ", tassert_data, " " + tcmp_data};
             toWriteInCSV.add(row);
             
 
