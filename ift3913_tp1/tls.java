@@ -17,7 +17,7 @@ import java.util.stream.Stream;
 
 import static org.junit.Assert.assertTrue;
 
-public class tls {
+public class Tls {
 
     private static List<String[]> dataLines = new ArrayList<>();
     private static String packageName;
@@ -140,7 +140,7 @@ public class tls {
    
     public static String convertToCSV(String[] data) {
         return Stream.of(data)
-                .map(tls::escapeSpecialCharacters)
+                .map(Tls::escapeSpecialCharacters)
                 .collect(Collectors.joining(","));
     }
 
@@ -159,7 +159,7 @@ public class tls {
 
             // inspo : https://stackoverflow.com/questions/3154488/how-do-i-iterate-through-the-files-in-a-directory-and-its-sub-directories-in-ja
             dataLines.stream()
-                    .map(tls::convertToCSV)
+                    .map(Tls::convertToCSV)
                     .forEach(pw::println);
         }
         assertTrue(csvOutputFile.exists());
