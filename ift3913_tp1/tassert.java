@@ -7,14 +7,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.ArrayList;
 
-public class tassert {
+public class Tassert {
 
     private static ArrayList<String> assertExp;
     private static int countAssertExp;
     private static boolean calledByTls;
 
      public static void setCountAssertExp(int i) {
-         tassert.countAssertExp = i;
+         Tassert.countAssertExp = i;
      }
 
      public static int getCountAssertExp() {
@@ -26,7 +26,7 @@ public class tassert {
     }
 
     public static void setCalledByTls(boolean calledByTls) {
-        tassert.calledByTls = calledByTls;
+        Tassert.calledByTls = calledByTls;
     }
 
     public static void setAssertExp(ArrayList<String> assertExpr) {

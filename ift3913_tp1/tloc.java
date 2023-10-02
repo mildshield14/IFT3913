@@ -2,7 +2,7 @@ package ift3913_tp1;
 
 import java.io.*;
 
-public class tloc {
+public class Tloc {
 
     private static boolean calledByTls = false;
     private static  int countTlocExp;
@@ -15,7 +15,7 @@ public class tloc {
     }
 
     public static void setCountTlocExp(int i) {
-        tloc.countTlocExp = i;
+        Tloc.countTlocExp = i;
     }
     public static int getCountTlocExp() {
         return countTlocExp;
