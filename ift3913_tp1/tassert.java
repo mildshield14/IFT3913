@@ -10,23 +10,10 @@ import java.util.ArrayList;
 public class Tassert {
 
     private static ArrayList<String> assertExp;
-    private static int countAssertExp;
-    private static boolean calledByTls;
 
-     public static void setCountAssertExp(int i) {
-         Tassert.countAssertExp = i;
-     }
-
-     public static int getCountAssertExp() {
-         return countAssertExp;
-     }
 
     public static ArrayList<String> getAssertExp() {
         return assertExp;
-    }
-
-    public static void setCalledByTls(boolean calledByTls) {
-        Tassert.calledByTls = calledByTls;
     }
 
     public static void setAssertExp(ArrayList<String> assertExpr) {
@@ -39,39 +26,44 @@ public class Tassert {
     // fail, assertArrayEquals, assertEquals, assertNotEquals, assertFalse, assertNotNull, assertNotSame
     // assertNull, assertSame, assertThat, assertThrows, assertTrue
 
-     setCountAssertExp(0);
+     int countExp=countExp(args[0].toString());
 
-     populateAssertExp();
+     System.out.println("Tassert value : " +countExp);
 
-     try {
-      File fileJava = new File(args[0]);
-      Scanner myReader = new Scanner(fileJava);
-
-      while (myReader.hasNextLine()) {
-        String data = myReader.nextLine();
-        boolean found = checkAssertExp(data);
-
-        if(found==true){
-            countAssertExp=countAssertExp+1;
-        }
-        
-      }
-
-      myReader.close();
-      setCountAssertExp(countAssertExp);
-
-      if (calledByTls==false) {
-          System.out.println(countAssertExp);
-      }else{
-          calledByTls=false;
-      }
-      
-    } catch (FileNotFoundException e) {
-      System.out.println("An error occurred.");
-      e.printStackTrace();
-    }
     
-   }   
+   }
+
+    public static int countExp(String filename) {
+        populateAssertExp();
+
+        int countAssertExp = 0;
+        try {
+            File fileJava = new File(filename);
+            Scanner myReader = new Scanner(fileJava);
+
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                boolean found = checkAssertExp(data);
+
+                if (found == true) {
+                    countAssertExp = countAssertExp + 1;
+                }
+
+            }
+
+            myReader.close();
+
+            return countAssertExp;
+
+
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+
+        return -1;
+
+    }
 
     public static void populateAssertExp(){
 

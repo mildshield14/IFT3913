@@ -79,15 +79,11 @@ public class Tls {
 
             List<String[]> toWriteInCSV = new ArrayList<>();
 
-            String[] file_name = {path.toFile().toString()};
+            String file_name = path.toFile().toString();
 
-            tloc.setCalledByTls(true);
-            tloc.main(file_name);
-            String tloc_data=tloc.getCountTlocExp() + "";
+            String tloc_data=Tloc.countTloc(file_name) + "";
 
-            tassert.setCalledByTls(true);
-            tassert.main(file_name);
-            String tassert_data=tassert.getCountAssertExp() + "";
+            String tassert_data=Tassert.countExp(file_name) + "";
 
             String file_title= path.toFile().getName().toString();
 
