@@ -4,23 +4,6 @@ import java.io.*;
 
 public class Tloc {
 
-    private static boolean calledByTls = false;
-    private static  int countTlocExp;
-
-    public static void setCalledByTls(boolean calledByTLS) {
-        calledByTls = calledByTLS;
-    }
-    public static boolean getCalledbyTls() {
-        return calledByTls;
-    }
-
-    public static void setCountTlocExp(int i) {
-        Tloc.countTlocExp = i;
-    }
-    public static int getCountTlocExp() {
-        return countTlocExp;
-    }
-
     public static void main(String[] args) {
 
         if (args.length != 1) {
@@ -29,12 +12,9 @@ public class Tloc {
         }
         String nameSourceFile = args[0]; //argument de la fonction "countTloc"
         int tlocNum = countTloc(nameSourceFile);
-        setCountTlocExp(tlocNum);
 
-        if (!getCalledbyTls()){
-            System.out.println("TLOC: " + tlocNum);
-            setCalledByTls(false);
-        }
+        System.out.println("TLOC: " + tlocNum);
+
 
     }
 

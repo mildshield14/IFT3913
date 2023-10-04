@@ -1,0 +1,6 @@
+./TextTitleTest.java, org.jfree.chart.title, TextTitleTest, 77 ,25, 3
+./CompositeTitleTest.java, org.jfree.chart.title, CompositeTitleTest, 78 ,20, 3
+./ShortTextTitleTest.java, org.jfree.chart.title, ShortTextTitleTest, 36 ,9, 4
+./ImageTitleTest.java, org.jfree.chart.title, ImageTitleTest, 6 ,0, 0
+./DateTitleTest.java, org.jfree.chart.title, DateTitleTest, 51 ,15, 3
+./TitleTest.java, org.jfree.chart.title, TitleTest, 37 ,11, 3
