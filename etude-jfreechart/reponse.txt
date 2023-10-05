@@ -22,3 +22,13 @@ et
 ne sont pas équivalentes niveau complexité du code.
 
 Une autre mesure qui pourrait potentiellement être théoriquement correcte pourrait être le temps d'éxécution des lignes de code. En effet, c'est une mesure qui a le mérite d'être prometteuse bien qu'elle doit être testée avant afin de s'assurer que cette une mesure légitime.
+
+-------------------
+En fait, lors de nos tests, seuil ne disposait que de données commençant à 17 %, ce qui peut entraîner des limitations dans la détection. Parce qu'il est possible que tropcomp identifie uniquement des problèmes très évidents et d'une complexité extrême et ignore les problèmes de complexité moindre.
+
+Il est également possible que les fichiers que nous testons soient d'une grande complexité, donc tropcomp peut très bien fonctionner dans de tels fichiers, mais nous devons également envisager l'utilisation de tropcmop dans des fichiers de faible complexité pour garantir qu'il peut répondre aux besoins des différents utilisateurs. .besoins.
+
+améliorer :
+Nous pouvons modifier l'algorithme de tropcomp pour rendre les résultats qu'il donne plus précis et plus fiables.
+
+Vous pouvez également recueillir les commentaires de l'équipe technique sur le code, afin de mieux comprendre les attentes et les exigences des utilisateurs concernant tropcomp.
