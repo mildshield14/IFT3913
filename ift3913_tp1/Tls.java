@@ -46,7 +46,7 @@ public class Tls {
         return dataLines;
     }
 
-    /** Cette méthode est au coeur de Tls. Elle va extraire toutes les infos des fichiers, l'isoler
+    /** Cette méthode est au cœur de Tls. Elle va extraire toutes les infos des fichiers, l'isoler
      * de qui n'est pas important et rajouter tout ce qui est pertient à une liste
      * @param path - folder/fichier dont l'on veut extraire les données**/
     public static void extractData(Path path) {
@@ -198,10 +198,10 @@ public class Tls {
     public static void main(String[] args) throws IOException {
          if (args.length ==1) {
              Files.walk(Path.of(args[0])).forEach(path -> fileOrDirec(path));
-       }else if (args.length==2){
+         }else if (args.length==3){
                 // Take folder comme entrée et extraire les données voulues
-                Path dir = Paths.get(args[1]);
-                Files.walk(dir).forEach(path -> fileOrDirecCSV(path, Path.of(args[0])));
+                Path dir = Paths.get(args[2]);
+                Files.walk(dir).forEach(path -> fileOrDirecCSV(path, Path.of(args[1])));
             }
         }
 
