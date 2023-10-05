@@ -34,8 +34,6 @@ Guide d'utilisation :
 
    2.2. Faites java -jar du fichier jar voulu suivi des arguments (toujours en absolute path).
    
-      2.2.1 Note: N'oubliez pas de rajouter un seuil à tropcomp
-   
           tloc -> java -jar tloc.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title/ImageTitleTest.java
          
           tassert -> java -jar tassert.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title/ImageTitleTest.java
@@ -45,14 +43,17 @@ Guide d'utilisation :
           tropcomp -> java -jar tropcomp.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title 20%
 
 
+     2.2.1 Note: N'oubliez pas de rajouter un seuil à tropcomp
+
+
 3. Autres précisions sur les paramètres des fichiers jar:
    
    3.1. Pour tls et tropcomp vous avez l'option de rajouter un fichier csv.
-        Pour votre convenance, nous l'avons déja crée et vous n'avez qu'à utiliser le absolute path
+        Pour votre convenance, nous l'avons déja crée et vous n'avez qu'à utiliser le absolute path 
    
-        tls -> java -jar tls.jar -o /Users/vennilasooben/IFT3913_TP1 /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title
+        tls -> java -jar tls.jar -o /Users/vennilasooben/IFT3913_TP1/etude-jfreechart/csv_file /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title
    
-        tropcomp -> java -jar tropcomp.jar -o /Users/vennilasooben/IFT3913_TP1 /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title 20%
+        tropcomp -> java -jar tropcomp.jar -o /Users/vennilasooben/IFT3913_TP1/etude-jfreechart/csv_file /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title 20%
 
 4. Autres commentaires pertinents sur l'éxécution:
    
