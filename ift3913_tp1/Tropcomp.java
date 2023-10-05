@@ -20,7 +20,7 @@ public class Tropcomp {
 
     seuilSrting = args[1];
 }else{
-// rajouter exception si !2 !4 args
+            throw new IllegalArgumentException("Please check the parameters you entered.");
         }
 
         //Convertir le seuil en nombre double
