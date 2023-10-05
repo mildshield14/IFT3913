@@ -11,9 +11,9 @@ Cette dernière observation est appuyée par le fait qu'on obtient le fichier Im
 Aini, nous pensons que la métrique tropcomp propose une mesure adéquate pour la mesure de complexité bien qu'elle ne soit pas idéale. 
 Aussi, les seuils doivent être mieux adaptés.
 
-Pour revenir à l'idée de mesure de complexité, nous pensons que juste compter les nombre de assert et commentaires (ou plûtot lignes sans commentaires) ne permet pas d'avoir une très bonne idée de la complexité du code autre que la taille de celle-ci. En effet, elle permet d'avoir une idée au niveau du nombre de lignes mais c'est une mesure qui reste approximative car par exemple:
+Pour revenir à l'idée de mesure de complexité, nous pensons que juste compter les nombre de assert et commentaires (ou plûtot lignes sans commentaires) ne permet pas d'avoir une très bonne idée de la complexité du code autre que la taille de celle-ci. En effet, elle permet d'avoir une idée au niveau du nombre de lignes mais c'est une mesure qui reste approximative car par exemple (merci à chatGPT avec le prompt: "give me an example of 2 lines of code in java (one line each) one considered complex and the other not" ):
 
-  int result = IntStream.range(1, 11).filter(i -> i % 2 == 0).map(i -> i * i).sum();
+  int result = IntStream.range(1, 11).filter(i -> i % 2 == 0).map(i -> i * i).sum(); 
 
 et 
 
