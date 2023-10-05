@@ -18,6 +18,7 @@ Guide d'utilisation :
 
 
 2. Executer les fichiers jar dans le terminal
+   
    2.1. Utilisez le absolute path, par exemple
    
     tloc -> cd /Users/vennilasooben/IFT3913_TP1/out/artifacts/tloc_jar
@@ -30,6 +31,7 @@ Guide d'utilisation :
 
 
    2.2. Faites java -jar du fichier jar voulu suivi des arguments (toujours en absolute path).
+   
     2.2.1 Note: N'oubliez pas de rajouter un seuil à tropcomp
    
     tloc -> java -jar tloc.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title/ImageTitleTest.java
@@ -41,7 +43,8 @@ Guide d'utilisation :
     tropcomp -> java -jar tropcomp.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title 20%
 
 
-4. Autres précisions sur les paramètres des fichiers jar:
+3. Autres précisions sur les paramètres des fichiers jar:
+   
    3.1. Pour tls et tropcomp vous avez l'option de rajouter un fichier csv.
         Pour votre convenance, nous l'avons déja crée et vous n'avez qu'à utiliser le absolute path
    
@@ -49,7 +52,8 @@ Guide d'utilisation :
 
      tropcomp -> java -jar tropcomp.jar -o /Users/vennilasooben/IFT3913_TP1 /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title 20%
 
-6. Autres commentaires pertinents sur l'éxécution:
+4. Autres commentaires pertinents sur l'éxécution:
+   
    4.1. Une éxécution avec le seuils de 1,5,10 % sur jfreechart-master/src/test/java/org/jfree/chart/title ne fonctionnera pas. Essayez en avec des seuils > 18% mais <=100% ou changez de directoire notamment en prenant plus de fichiers comme /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart
 
 
