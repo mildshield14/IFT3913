@@ -9,6 +9,8 @@ Yalin (matricule: , courriel: , github: )
 
 Lien du repositoire : https://github.com/mildshield14/IFT3913_TP1.git
 
+Lien vers notre réponse à la partie 5 dans le répositoire : etude-jfreechart/reponse.txt
+
 
 Guide d'utilisation :
 
