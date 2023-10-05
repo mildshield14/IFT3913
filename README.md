@@ -14,9 +14,9 @@ Guide d'utilisation :
 
 1. Télécharger JFreeChart : https://github.com/jfree/jfreechart
    
-   1.1 Copiez le absolute path de son emplacement localement sur votre appareil et remplacez "/Users/vennilasooben/Downloads/jfreechart-master" des étapes 3 par ce path
+   1.1. Copiez le absolute path de son emplacement localement sur votre appareil et remplacez "/Users/vennilasooben/Downloads/jfreechart-master" des étapes 3 par ce path
    
-   1.2 Remplacez /Users/vennilasooben/ de l'étape 2 par l'endroit où le repo a été enregistré sur votre appareil
+   1.2. Remplacez /Users/vennilasooben/ de l'étape 2 par l'endroit où le repo a été enregistré sur votre appareil
 
 
 2. Executer les fichiers jar dans le terminal
