@@ -15,8 +15,6 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.junit.Assert.assertTrue;
-
 public class Tls {
 
     private static List<String[]> dataLines = new ArrayList<>();
@@ -158,7 +156,7 @@ public class Tls {
                     .map(Tls::convertToCSV)
                     .forEach(pw::println);
         }
-        assertTrue(csvOutputFile.exists());
+        
        }
 
     
@@ -184,7 +182,7 @@ public class Tls {
         }
 
 
-    public static void fileOrDirecCSV(Path file, Path dir) {
+    public static void fileOrDirecCSV( Path file, Path dir) {
         if (file.toFile().isFile() && file.toString().endsWith(".java")) {
             extractData(file);
             try {
