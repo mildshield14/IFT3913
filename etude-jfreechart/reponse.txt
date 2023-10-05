@@ -1,1 +1,24 @@
+Afin de mener à bien notre analyse, nous avons effectué des éxécutions du code avec d'autres seuils que ceux mentionnés dans l'énoncé du TP. 
 
+Nous avons notamment essayé avec les seuils suivants 17%,20%,40%,60%,70%,100% dont les résultats ont été rajoutés aux fichiers csv correspondants.
+
+Nos observations:
+ - aucune information pour les seuils de 1%, 5% et 10% et donc 0 < pas de resultats < 17.
+ - plus on avance et plus on est censé diminuer en complexité.
+
+Cette dernière observation est appuyée par le fait qu'on obtient le fichier ImageTitleTest.java en dernier car ce fichier est rempli de commentaires donc est le "moins complexe".
+
+Aini, nous pensons que la métrique tropcomp propose une mesure adéquate pour la mesure de complexité bien qu'elle ne soit pas idéale. 
+Aussi, les seuils doivent être mieux adaptés.
+
+Pour revenir à l'idée de mesure de complexité, nous pensons que juste compter les nombre de assert et commentaires (ou plûtot lignes sans commentaires) ne permet pas d'avoir une très bonne idée de la complexité du code autre que la taille de celle-ci. En effet, elle permet d'avoir une idée au niveau du nombre de lignes mais c'est une mesure qui reste approximative car par exemple:
+
+  int result = IntStream.range(1, 11).filter(i -> i % 2 == 0).map(i -> i * i).sum();
+
+et 
+
+  System.out.println("Hello World!") 
+
+ne sont pas équivalentes niveau complexité du code.
+
+Une autre mesure qui pourrait potentiellement être théoriquement correcte pourrait être le temps d'éxécution des lignes de code. En effet, c'est une mesure qui a le mérite d'être prometteuse bien qu'elle doit être testée avant afin de s'assurer que cette une mesure légitime.
