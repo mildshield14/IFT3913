@@ -6,10 +6,10 @@ public class Partie5 {
     public static void main(String[] args) {
 
         // Directory and file name to test code (using JFreeChart)
-        String path_file = "ift3913_tp1/jfreechart-master-2/src/test/java/org/jfree/chart/title";
+        String path_file = "/Users/vennilasooben/Downloads/jfreechart/src/test/java/org/jfree/chart/title";
         String csv_file = "etude-jfreechart/csv_file";
 
-        for(int i=1;i<20;i=i+4){
+        for(int i=1;i<21;i=i+4){
 
             if (i==9){
                 i=10;
@@ -18,7 +18,7 @@ public class Partie5 {
             System.out.println(i);
 
 
-        String[] str= { "-o",csv_file,path_file, i+""};
+        String[] str= { "-o",csv_file+i+"",path_file, i+""};
 
         try {
             Tropcomp.main(str);
