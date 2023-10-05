@@ -1,2 +1,2 @@
-./TextTitleTest.java, null, TextTitleTest, 76 ,25, 3
-./CompositeTitleTest.java, null, CompositeTitleTest, 77 ,20, 3
+./TextTitleTest.java, org.jfree.chart.title, TextTitleTest, 77 ,25, 3
+./CompositeTitleTest.java, org.jfree.chart.title, CompositeTitleTest, 78 ,20, 3

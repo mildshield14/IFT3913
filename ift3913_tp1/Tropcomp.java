@@ -6,15 +6,23 @@ import java.util.*;
 public class Tropcomp {
 
     public static void main(String[] args) throws IOException {
-        if (args.length != 4 || !args[0].equals("-o")) {
-            System.out.println("Enter in the correct format -o <output-file.csv> <project-path> <seuil%>");
-            return;
+        String seuilSrting="";
+        String projectPath="";
+        String outputFile="";
+        if(args.length==4) {
+    outputFile = args[1];
+
+    projectPath = args[2];
+
+    seuilSrting = args[3];
+}else if (args.length==2){
+    projectPath = args[0];
+
+    seuilSrting = args[1];
+}else{
+// rajouter exception si !2 !4 args
         }
 
-        String outputFile = args[1];
-        String projectPath = args[2];
-
-        String seuilSrting = args[3];
         //Convertir le seuil en nombre double
         double seuil = Double.parseDouble(seuilSrting.replaceAll("%", ""));
 
@@ -73,7 +81,9 @@ public class Tropcomp {
         for (int i = 0; i < javaFiles.size(); i++) {
             if (selectedTlocValues.contains(tlocV.get(i)) && selectedTassertValues.contains(tassertV.get(i))) {
 
-                Tls.fileOrDirecCSV(Paths.get(javaFiles.get(i).toString()), Paths.get(outputFile));
+                if (args.length==4) {
+                    Tls.fileOrDirecCSV(Paths.get(javaFiles.get(i).toString()), Paths.get(outputFile));
+                }
 
                 Tls.extractData(Paths.get(javaFiles.get(i).toString()));
 
@@ -84,7 +94,7 @@ public class Tropcomp {
 
         }
 
-        if (!outputFile.isEmpty()) {
+        if (!outputFile.isEmpty() && args.length==4) {
             System.out.println("Results saved to " + outputFile);
         }
 
