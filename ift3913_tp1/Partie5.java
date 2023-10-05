@@ -7,7 +7,7 @@ public class Partie5 {
 
         // Directory and file name to test code (using JFreeChart)
         String path_file = "/Users/vennilasooben/Downloads/jfreechart/src/test/java/org/jfree/chart/title";
-        String csv_file = "etude-jfreechart/csv_file";
+        String csv_file = "etude-jfreechart/csv_file40";
 
         for(int i=1;i<21;i=i+4){
 
