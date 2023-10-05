@@ -1,1 +1,9 @@
+l’heuristique de tropcomp:
+En fait, lors de nos tests, tropcomp ne disposait que de données commençant au seuil17 %, ce qui peut entraîner des limitations dans la détection. Parce qu'il est possible que tropcomp identifie uniquement des fichiers évidents qui ont une complexité extrême et ignore les fichiers  moins de complexité .
 
+Il est également possible que les fichiers que nous testons soient d'une grande complexité, donc tropcomp peut bien fonctionner dans de tels fichiers, mais nous devons également envisager l'utilisation de tropcmop dans des fichiers de faible complexité pour garantir qu'il peut répondre aux besoins des différents utilisateurs.
+
+améliorer :
+Nous pouvons modifier l'algorithme de tropcomp pour rendre les résultats qu'il donne plus précis et plus fiables.
+
+Nous pouvons également recueillir les commentaires de l'équipe technique sur le code, afin de mieux comprendre les attentes et les exigences des utilisateurs concernant tropcomp.
