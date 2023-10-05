@@ -2,9 +2,6 @@
   <library name="java">
     <CLASSES />
     <JAVADOC />
-    <SOURCES>
-      <root url="file://$PROJECT_DIR$/ift3913_tp1/lib/jfreechart-master/src/main/java" />
-      <root url="file://$PROJECT_DIR$/ift3913_tp1/lib/jfreechart-master/src/test/java" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

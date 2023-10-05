@@ -1,7 +1,6 @@
 <component name="libraryTable">
   <library name="junit-4.13.2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/junit-4.13.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/ift3913_tp1/lib/junit-4.13.2.jar!/" />
     </CLASSES>
     <JAVADOC />

@@ -19,7 +19,6 @@
     </orderEntry>
     <orderEntry type="library" exported="" name="junit-4.13.2" level="project" />
     <orderEntry type="library" exported="" name="java" level="project" />
-    <orderEntry type="library" name="java1" level="project" />
     <orderEntry type="module-library">
       <library name="JUnit5.8.1">
         <CLASSES>
@@ -36,6 +35,88 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" scope="RUNTIME" name="chart" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/annotations" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/api" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/axis" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/block" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/date" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/encoders" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/entity" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/event" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/imagemap" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/internal" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/labels" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/legend" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/plot" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/plot/compass" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/plot/dial" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/plot/flow" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/plot/pie" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/renderer" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/renderer/category" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/renderer/xy" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/swing" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/swing/editor" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/text" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/text/format" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/title" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/urls" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/chart/util" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/category" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/flow" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/function" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/gantt" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/general" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/io" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/json" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/json/impl" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/resources" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/time" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/time/ohlc" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/xml" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/main/java/org/jfree/data/xy" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/annotations" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/api" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/axis" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/block" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/entity" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/imagemap" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/internal" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/labels" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/legend" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/plot" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/plot/compass" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/plot/dial" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/plot/flow" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/plot/pie" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/renderer" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/renderer/category" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/renderer/xy" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/swing" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/text/format" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/title" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/chart/urls" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/data" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/data/category" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/data/flow" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/data/function" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/data/gantt" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/data/general" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/data/statistics" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/data/time" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/data/time/ohlc" />
+          <root url="file://$MODULE_DIR$/ift3913_tp1/jfreechart-master/src/test/java/org/jfree/data/xy" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="chart" level="project" />
   </component>
 </module>
