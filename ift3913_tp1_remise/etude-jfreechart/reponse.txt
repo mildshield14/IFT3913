@@ -1,0 +1,35 @@
+Afin de mener à bien notre analyse, nous avons effectué des exécutions du code avec d'autres seuils que ceux mentionnés dans l'énoncé du TP.
+
+Nous avons notamment essayé avec les seuils suivants : 17 %, 20 %, 40 %, 60 %, 70 %, 100 %, dont les résultats ont été ajoutés aux fichiers CSV correspondants.
+
+Nos observations :
+- Aucune information pour les seuils de 1 %, 5 % et 10 %, donc 0 < pas de résultats < 17.
+- Plus on avance, plus on est censé diminuer en complexité.
+
+Cette dernière observation est appuyée par le fait qu'on obtient le fichier ImageTitleTest.java en dernier, car ce fichier est rempli de commentaires et est donc le "moins complexe".
+
+Ainsi, nous pensons que la métrique tropcomp propose une mesure adéquate pour la mesure de complexité, bien qu'elle ne soit pas idéale. Aussi, les seuils doivent être mieux adaptés.
+
+Pour revenir à l'idée de mesure de complexité, nous pensons que compter simplement le nombre d'assertions et de commentaires (ou plutôt de lignes sans commentaires) ne permet pas d'avoir une très bonne idée de la complexité du code autre que la taille de celui-ci. En effet, cela permet d'avoir une idée du nombre de lignes, mais c'est une mesure qui reste approximative, car par exemple (merci à ChatGPT avec le prompt : "give me an example of 2 lines of code in Java (one line each) one considered complex and the other not") :
+
+ 
+   int result = IntStream.range(1, 11).filter(i -> i % 2 == 0).map(i -> i * i).sum();
+
+et
+
+   System.out.println("Hello World!");
+
+
+ne sont pas équivalentes en termes de complexité du code.
+
+Une autre mesure qui pourrait potentiellement être théoriquement correcte pourrait être le temps d'exécution des lignes de code. En effet, c'est une mesure qui a le mérite d'être prometteuse, bien qu'elle doive être testée au préalable afin de s'assurer qu'il s'agit d'une mesure légitime."
+
+-------------------
+En fait, lors de nos tests, seuil ne disposait que de données commençant à 17 %, ce qui peut entraîner des limitations dans la détection. Parce qu'il est possible que tropcomp identifie uniquement des problèmes très évidents et d'une complexité extrême et ignore les problèmes de complexité moindre.
+
+Il est également possible que les fichiers que nous testons soient d'une grande complexité, donc tropcomp peut très bien fonctionner dans de tels fichiers, mais nous devons également envisager l'utilisation de tropcmop dans des fichiers de faible complexité pour garantir qu'il peut répondre aux besoins des différents utilisateurs. .besoins.
+
+améliorer :
+Nous pouvons modifier l'algorithme de tropcomp pour rendre les résultats qu'il donne plus précis et plus fiables.
+
+Vous pouvez également recueillir les commentaires de l'équipe technique sur le code, afin de mieux comprendre les attentes et les exigences des utilisateurs concernant tropcomp.
