@@ -23,7 +23,7 @@ Guide d'utilisation :
 
 2. Executer les fichiers jar dans le terminal
    
-   2.1. Utilisez le absolute path, par exemple
+   2.1.1 A partir du zip téléchargé sur GitHub, utilisez le absolute path, par exemple
    
        tloc -> cd /Users/vennilasooben/IFT3913_TP1/out/artifacts/tloc_jar
       
@@ -32,6 +32,16 @@ Guide d'utilisation :
        tls -> cd /Users/vennilasooben/IFT3913_TP1/out/artifacts/tls_jar
       
        tropcomp -> cd /Users/vennilasooben/IFT3913_TP1/out/artifacts/tropcomp_jar
+
+   2.1.2 A partir du zip de remise sur StudiUM, utilisez le path du zip dézipper, par exemple
+
+       tloc -> cd /Users/vennilasooben/IFT3913_TP1_remise
+      
+       tassert -> cd /Users/vennilasooben/IFT3913_TP1_remise
+      
+       tls -> cd /Users/vennilasooben/IFT3913_TP1_remise
+      
+       tropcomp -> cd //Users/vennilasooben/IFT3913_TP1_remise
 
 
    2.2. Faites java -jar du fichier jar voulu suivi des arguments (toujours en absolute path).
@@ -45,7 +55,7 @@ Guide d'utilisation :
           tropcomp -> java -jar tropcomp.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title 20%
 
 
-     2.2.1 Note: N'oubliez pas de rajouter un seuil à tropcomp
+   2.3 Note: N'oubliez pas de rajouter un seuil à tropcomp
 
 
 3. Autres précisions sur les paramètres des fichiers jar:
