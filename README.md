@@ -1,10 +1,10 @@
-# IFT3913_TP1 par Vennila Sooben (20235256) et Yalin
+# IFT3913_TP1 par Vennila Sooben (20235256) et Yalin Mo(20199655)
 
 Date de remise: 06 octobre 2023
 
 Auteurs : 
 Vennila Sooben (matricule: 20235356, courriel: vennila.sooben@umontreal.ca, github: https://github.com/mildshield14)
-Yalin (matricule: , courriel: , github: )
+Yalin Mo (matricule:20199655 , courriel: yalin.mo@umontreal.ca )
 
 
 Lien du repositoire : https://github.com/mildshield14/IFT3913_TP1.git
