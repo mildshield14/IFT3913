@@ -55,11 +55,11 @@ Ici pour tester JFreeChart, entrez le nom du script suivis des 2 arguments (lien
                
    1.3.4. Si tout se passe correctement, vous avez maintenant un fichier HTML qui se situe dans le dossier jfreechart cloné appelé test_results.HTML
    
-               1.3.4.1. Vous pouvez utiliser l'extension Liveserver de Visual Studio Code pour visualiser ce fichier 
+    1.3.4.1. Vous pouvez utiliser l'extension Liveserver de Visual Studio Code pour visualiser ce fichier 
                
-               1.3.4.2. Vous pouvez ouvrir le fichier avec un navigateur web.
+    1.3.4.2. Vous pouvez ouvrir le fichier avec un navigateur web.
                
-               1.3.4.3. (Demande à ChatGPT: écrit un guide sur la manière de visualiser un fichier HTML ; 
+    1.3.4.3. (Demande à ChatGPT: écrit un guide sur la manière de visualiser un fichier HTML ; 
                         nous avons obtenu des infos sur comment le faire sur le terminal mais n'avons pas testé pour Windows et Linux)
                         
                          Sur Windows -> start nom_du_fichier.html
@@ -120,13 +120,13 @@ Guide d'utilisation :
 
    2.2. Faites java -jar du fichier jar voulu suivi des arguments (toujours en absolute path).
    
-          tloc -> java -jar tloc.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title/ImageTitleTest.java
+       tloc -> java -jar tloc.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title/ImageTitleTest.java
          
-          tassert -> java -jar tassert.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title/ImageTitleTest.java
+       tassert -> java -jar tassert.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title/ImageTitleTest.java
          
-          tls -> java -jar tls.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title
+       tls -> java -jar tls.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title
          
-          tropcomp -> java -jar tropcomp.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title 20%
+       tropcomp -> java -jar tropcomp.jar /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title 20%
 
 
    2.3 Note: N'oubliez pas de rajouter un seuil à tropcomp
@@ -137,9 +137,9 @@ Guide d'utilisation :
    3.1. Pour tls et tropcomp vous avez l'option de rajouter un fichier csv.
         Pour votre convenance, nous l'avons déja crée et vous n'avez qu'à utiliser le absolute path 
    
-        tls -> java -jar tls.jar -o /Users/vennilasooben/IFT3913_TP1/etude-jfreechart/csv_file /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title
+       tls -> java -jar tls.jar -o /Users/vennilasooben/IFT3913_TP1/etude-jfreechart/csv_file /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title
    
-        tropcomp -> java -jar tropcomp.jar -o /Users/vennilasooben/IFT3913_TP1/etude-jfreechart/csv_file /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title 20%
+       tropcomp -> java -jar tropcomp.jar -o /Users/vennilasooben/IFT3913_TP1/etude-jfreechart/csv_file /Users/vennilasooben/Downloads/jfreechart-master/src/test/java/org/jfree/chart/title 20%
 
 4. Autres commentaires pertinents sur l'éxécution:
    
