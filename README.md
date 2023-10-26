@@ -17,7 +17,7 @@ Lien vers notre réponse dans le rapport dans le répositoire : `ift3913_tp2/rap
 
 # Guide d'utilisation des scripts par métriques:
 
-# Métrique 1 : TEST EXECUTION TIME
+# Métrique 1 : Execution Time
 
 ## Description:
 
@@ -152,7 +152,7 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
 
 ----------------------------------------------------------------------------------
 
-TP1
+# TP1
 
 Date de remise: 06 octobre 2023
 
@@ -165,7 +165,7 @@ Lien du repositoire : https://github.com/mildshield14/IFT3913.git
 Lien vers notre réponse à la partie 5 dans le répositoire : etude-jfreechart/reponse.txt
 
 
-Guide d'utilisation :
+## Guide d'utilisation :
 
 1. Télécharger JFreeChart : https://github.com/jfree/jfreechart
    
