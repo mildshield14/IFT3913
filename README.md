@@ -16,7 +16,9 @@ Lien vers notre réponse dans le rapport dans le répositoire : `ift3913_tp2/rap
 Guide d'utilisation des scripts par métriques:
 
 Métrique 1 : TEST EXECUTION TIME
+
     - Utilisation de script bash
+    
     - Données sauvegardées en format HTML
 
  1.1. Téléchargez mvn sur et dézippez le
