@@ -1,4 +1,12 @@
-# IFT3913_TP1 par Vennila Sooben (20235256) et Yalin Mo (20199655)
+# IFT3913 par Vennila Sooben (20235256) et Yalin Mo (20199655)
+
+TP2
+
+
+
+----------------------------------------------------------------------------------
+
+TP1
 
 Date de remise: 06 octobre 2023
 
@@ -7,7 +15,7 @@ Vennila Sooben (matricule: 20235356, courriel: vennila.sooben@umontreal.ca, gith
 Yalin Mo (matricule: 20199655 , courriel: yalin.mo@umontreal.ca )
 
 
-Lien du repositoire : https://github.com/mildshield14/IFT3913_TP1.git
+Lien du repositoire : https://github.com/mildshield14/IFT3913.git
 
 Lien vers notre réponse à la partie 5 dans le répositoire : etude-jfreechart/reponse.txt
 
