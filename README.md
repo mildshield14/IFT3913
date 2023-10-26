@@ -6,7 +6,9 @@ Date de remise: 06 octobre 2023
 
 Auteurs : 
 Vennila Sooben (matricule: 20235356, courriel: vennila.sooben@umontreal.ca, github: https://github.com/mildshield14)
+
 Yalin Mo (matricule: 20199655 , courriel: yalin.mo@umontreal.ca )
+
 
 Lien du repositoire : `https://github.com/mildshield14/IFT3913.git`
 
@@ -17,11 +19,15 @@ Lien vers notre réponse dans le rapport dans le répositoire : `ift3913_tp2/rap
 
 # Métrique 1 : TEST EXECUTION TIME
 
+## Description:
+
     - Utilisation de script bash
 
     - Entrées : Lien repo github clonable, path du dossier de tests avec fichier de test finissant par Test.java
     
     - Sorties : Données sauvegardées en format HTML + sorties dans le terminal
+
+## Guide:
 
  1.1. Téléchargez mvn sur `https://maven.apache.org/download.cgi` et dézippez le
 
@@ -69,7 +75,7 @@ Ici pour tester JFreeChart, entrez le nom du script suivis des 2 arguments (lien
                         
   Assurez-vous de remplacer nom_du_fichier.html par le nom réel de votre fichier HTML et d'être sur le bon emplacement(cd).
 
-# Metrique 2:
+# Metrique 2: Code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
 
 # Outil de Mesure Tache2
 
