@@ -47,7 +47,7 @@ Lien vers notre réponse dans le rapport dans le répositoire : `ift3913_tp2/rap
    
    1.3.1.2 Sinon, vous pouvez utiliser le absolute path en clonant notre repo git, par exemple:
    
-    cd /Users/vennilasooben/IFT3913/ift3913_tp2
+    cd /Users/vennilasooben/IFT3913/ift3913_tp2/analyse_metrique1
           
    1.3.2. Assurez-vous d'avoir les permissions en entrant sur le terminal,
    
