@@ -18,8 +18,10 @@ Guide d'utilisation des scripts par métriques:
 Métrique 1 : TEST EXECUTION TIME
 
     - Utilisation de script bash
+
+    - Entrées : Lien repo github clonable, path du dossier de tests avec fichier de test finissant par Test.java
     
-    - Données sauvegardées en format HTML
+    - Sorties : Données sauvegardées en format HTML + sorties dans le terminal
 
  1.1. Téléchargez mvn sur et dézippez le
 
