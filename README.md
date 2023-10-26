@@ -45,7 +45,7 @@ Métrique 1 : TEST EXECUTION TIME
           
    1.3.2. Assurez-vous d'avoir les permissions en entrant sur le terminal,
    
-    chmod +x scr.sh
+    chmod +x script_tests_exec.sh
     
    1.3.3. Nous avons essayer de généraliser le code en le faisant rouler sur tous les repos GitHub clonable ayant un folder de tests avec des noms de fichiers finissant par Test.java.
 
