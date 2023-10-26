@@ -25,8 +25,11 @@ Métrique 1 : TEST EXECUTION TIME
 
  1.2. Sur votre terminal, entrez
       `export PATH=/path/to/your/directory/apache-maven-x.y.z/bin:$PATH`
+      
       N'oubliez pas de remplacer /path/to/your/directory/apache-maven-x.y.z/bin par votre path local du bin de mvn
+      
       Assurez-vous que ceci a fonctionné en entrant dans votre terminal,
+      
       `mvn -version`
 
   1.3. Vous pouvez désormais roulez nos scripts.
