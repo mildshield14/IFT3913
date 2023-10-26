@@ -23,7 +23,7 @@ Métrique 1 : TEST EXECUTION TIME
     
     - Sorties : Données sauvegardées en format HTML + sorties dans le terminal
 
- 1.1. Téléchargez mvn sur et dézippez le
+ 1.1. Téléchargez mvn sur `https://maven.apache.org/download.cgi` et dézippez le
 
  1.2. Sur votre terminal, entrez
  
