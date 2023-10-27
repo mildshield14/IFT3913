@@ -171,7 +171,7 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
 
  1.2 Entrez la ligne suivante:
 
-     python script_age.py https://github.com/jfree/jfreechart.git src/test/java/org/jfree/chart/title src/main/java/org/jfree/chart/title
+     python script.py https://github.com/jfree/jfreechart.git src/test/java/org/jfree/chart/title src/main/java/org/jfree/chart/title
 
    1.2.1 La sortie se trouve dans le dossier jfreechart qu'on a cloné dans le script
    
@@ -196,7 +196,7 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
 
  1.2 Entrez la ligne suivante:
 
-     ./script_codechurn.sh https://github.com/jfree/jfreechart.git src/main/java/org/jfree/chart/title
+     ./test.sh https://github.com/jfree/jfreechart.git src/main/java/org/jfree/chart/title
 
    1.2.1 La sortie se trouve dans le dossier appele temp_dir où on y retrouve jfreechart qu'on a cloné dans le script
 
