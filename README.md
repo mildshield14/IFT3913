@@ -12,7 +12,7 @@ Yalin Mo (matricule: 20199655 , courriel: yalin.mo@umontreal.ca )
 
 Lien du repositoire : `https://github.com/mildshield14/IFT3913.git`
 
-Lien vers notre réponse dans le rapport dans le répositoire : `ift3913_tp2/rapport.pdf`
+Lien vers notre réponse dans le rapport dans le répositoire : `/ift3913_tp2/IFT3913_TP2_rapport.pdf`
 
 
 ## Guide d'utilisation des scripts par métriques:
@@ -76,6 +76,10 @@ Ici pour tester JFreeChart, entrez le nom du script suivis des 2 arguments (lien
 
                         
   Assurez-vous de remplacer nom_du_fichier.html par le nom réel de votre fichier HTML et d'être sur le bon emplacement(cd).
+
+
+## Réponse : Se trouve à `ift3913_tp2/analyse_metrique_exectime/metrique1_screenshots/resultat1.png` et `ift3913_tp2/analyse_metrique_exectime/metrique1_screenshots/resultat1.png` avec une meilleure analyse dans `ift3913_tp2/analyse_metrique_exectime/metrique1_screenshots/scatter.png`
+
 
 ## Metrique 2: Code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
 
@@ -153,6 +157,9 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
 3. Cet outil suppose que le projet JFreeChart est situé correctement. Vous pouvez modifier les variables src_directory et test_directory dans le script pour pointer vers votre répertoire de projet JFreeChart.
 
 
+## Réponse : Se trouve à `ift3913_tp2/Tester_des_metriques_3913TP2/Capture_d'ecran des_resultats`
+
+
 ## Métrique 3 : Age
 
 ## Description:
@@ -177,6 +184,7 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
    
    1.2.2. Notez qu'une ligne bizarre apparaît dans le fichier csv il s'agit du fichier package-info.java qui n'a pas de fichier test correspondant.
 
+## Réponse : Reponse identique pour dossier source et test => pas de conclusion
 
 ## Métrique 4 : Code Churn
 
@@ -200,7 +208,7 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
 
    1.2.1 La sortie se trouve dans le dossier appele temp_dir où on y retrouve jfreechart qu'on a cloné dans le script
 
-
+## Réponse : Se trouve à `ift3913_tp2/analyse_metrique_codechurn/Screenshot 2023-10-27 at 5.38.59 PM.png`
 
 
 ----------------------------------------------------------------------------------
