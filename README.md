@@ -16,6 +16,8 @@ Lien vers notre réponse dans le rapport dans le répositoire : `ift3913_tp2/rap
 
 
 ## Guide d'utilisation des scripts par métriques:
+## Note importante | Disclaimer :
+Nous n'avons pas testé nos scripts dans un environnement Windows. Théoriquement, notre guide devrait suffire mais la réussite de l'éxécution n'est pas garantie.
 
 ## Métrique 1 : Execution Time
 
