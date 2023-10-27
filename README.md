@@ -150,7 +150,7 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
 ## Dépendances
 1. Le script suppose que Maven est installé et est accessible depuis le terminal (i.e., dans le PATH).
 2. Le projet JFreeChart doit avoir une structure de répertoire standard avec src/main et src/test.
-3. Cet outil suppose que le projet JFreeChart est situé à /Users/yalin/Desktop/jfreechart-master. Vous pouvez modifier les variables src_directory et test_directory dans le script pour pointer vers votre répertoire de projet JFreeChart.
+3. Cet outil suppose que le projet JFreeChart est situé correctement. Vous pouvez modifier les variables src_directory et test_directory dans le script pour pointer vers votre répertoire de projet JFreeChart.
 
 
 ## Métrique 3 : Age
