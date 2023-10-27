@@ -96,7 +96,7 @@ Sinon, executez la command "cd /path/to/directory/" pour y aller
     "Le temps moyen de réparation est: float heur/s"
   
 13. Assurez-vous que l'outil Cloc est disponible sur votre terminal
-  13.1Vous pouvez vérifier la disponibilité de l'outil cloc en exécutant le code suivant dans le terminal :
+  13.1 Vous pouvez vérifier la disponibilité de l'outil cloc en exécutant le code suivant dans le terminal :
     “cloc --version”
     Si cloc est installé, cette command affichera son numéro de version. S'il n'est pas installé, vous pouvez recevoir un message d'erreur tel que « command not found» ou un message similaire.
     -- Si c'est installé, executez la command "cloc /path/to/your/source/code"
@@ -107,12 +107,6 @@ Sinon, executez la command "cd /path/to/directory/" pour y aller
       (2)"brew install cloc" macOS
       (3)"choco install cloc" Windows
       Effectuez ensuite les opérations ci-dessus pour obtenir les résultats.
-
-
-
-
-
-Vous disposez de l'outil de commande cloc. Afin d'obtenir les résultats LOC, CLOC et CLOC du fichier de test, nous utilisons la commande cloc sur le terminal.
 
 ## Dépendances
 1. Le script suppose que Maven est installé et est accessible depuis le terminal (i.e., dans le PATH).
