@@ -17,7 +17,10 @@ Lien vers notre réponse dans le rapport dans le répositoire : `ift3913_tp2/rap
 
 # Guide d'utilisation des scripts par métriques:
 
-# Métrique 1 : Execution Time
+## Note importante | Disclaimer :
+Nous n'avons pas testé nos scripts dans un environnement Windows. Théoriquement, notre guide devrait suffire mais la réussite de l'éxécution n'est pas garantie.
+
+## Métrique 1 : Execution Time
 
 ## Description:
 
@@ -75,9 +78,9 @@ Ici pour tester JFreeChart, entrez le nom du script suivis des 2 arguments (lien
                         
   Assurez-vous de remplacer nom_du_fichier.html par le nom réel de votre fichier HTML et d'être sur le bon emplacement(cd).
 
-# Metrique 2: Code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
+## Metrique 2: Code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
 
-# Outil de Mesure Tache2
+## Outil de Mesure Tache2
 
 Ce projet utilise un script Python pour analyser les tests du projet JFreeChart, en particulier en testant le rapport code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
 
@@ -149,7 +152,7 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
 
 
 
-# Métrique 3 : Age
+## Métrique 3 : Age
 
 ## Description:
 
@@ -174,7 +177,7 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
    1.2.2. Notez qu'une ligne bizarre apparaît dans le fichier csv il s'agit du fichier package-info.java qui n'a pas de fichier test correspondant.
 
 
-# Métrique 4 : Code Churn
+## Métrique 4 : Code Churn
 
 ## Description:
 
