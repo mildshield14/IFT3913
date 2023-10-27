@@ -1,6 +1,19 @@
 README.md
-# IFT3913_TP2 par Vennila Sooben (20235256) et Yalin Mo (20199655)
-# Date: 27 Octobre 2023
+# IFT3913 TP par Vennila Sooben (20235256) et Yalin Mo (20199655)
+
+# TP2
+
+Date: 27 octobre 2023
+
+Auteurs : 
+Vennila Sooben (matricule: 20235356, courriel: vennila.sooben@umontreal.ca, github: https://github.com/mildshield14)
+
+Yalin Mo (matricule: 20199655 , courriel: yalin.mo@umontreal.ca )
+
+Lien du repositoire : `https://github.com/mildshield14/IFT3913.git`
+
+Lien vers notre réponse dans le rapport dans le répositoire : `ift3913_tp2/rapport.pdf`
+
 # Outil de Mesure Tache2
 
 Ce projet utilise un script Python pour analyser les tests du projet JFreeChart, en particulier en testant le rapport code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
@@ -11,6 +24,7 @@ Avant d'utiliser cet outil, assurez-vous d'avoir les prérequis suivants install
 - Python 3.x.x
 - Apache Maven
 - Un dépôt git cloné localement
+- cloc (Count Lines Of Code) qui est un outil de ligne de commande utilisé pour compter le nombre de lignes de code, le nombre de lignes de commentaires et le nombre de lignes vides dans le code source.
 
 ## Description
 1. Le script “3913tp2.py” réalise les analyses suivantes :
@@ -95,6 +109,21 @@ Sinon, executez la command "cd /path/to/directory/" pour y aller
   11.1 exécuter la commande "python git.py" pour exécuter le script
 12. Le résultat est imprimé sous la forme suivante
     "Le temps moyen de réparation est: float heur/s"
+  
+13. Assurez-vous que l'outil Cloc est disponible sur votre terminal
+  13.1 Vous pouvez vérifier la disponibilité de l'outil cloc en exécutant le code suivant dans le terminal :
+    “cloc --version”
+    Si cloc est installé, cette command affichera son numéro de version. S'il n'est pas installé, vous pouvez recevoir un message d'erreur tel que « command not found» ou un message similaire.
+    -- Si c'est installé, executez la command "cloc /path/to/your/source/code"
+      Example:"cloc /Users/yalin/Desktop/jfreechart/src"
+      La langue, le nombre de fichiers, LOC, LOCet NLOC dans le projet seront tous affichés sur le terminal.
+    -- Si non, utilisez la command suivant pour l'installer
+      (1)"sudo apt-get install cloc" Linux
+      (2)"brew install cloc" macOS
+      (3)"choco install cloc" Windows
+      Effectuez ensuite les opérations ci-dessus pour obtenir les résultats.
+
+
 
 ## Dépendances
 1. Le script suppose que Maven est installé et est accessible depuis le terminal (i.e., dans le PATH).

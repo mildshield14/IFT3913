@@ -1,4 +1,4 @@
-# IFT3913 par Vennila Sooben (20235256) et Yalin Mo (20199655)
+# IFT3913 TP par Vennila Sooben (20235256) et Yalin Mo (20199655)
 
 # TP2
 
@@ -15,9 +15,11 @@ Lien du repositoire : `https://github.com/mildshield14/IFT3913.git`
 Lien vers notre réponse dans le rapport dans le répositoire : `ift3913_tp2/rapport.pdf`
 
 
-# Guide d'utilisation des scripts par métriques:
+## Guide d'utilisation des scripts par métriques:
+## Note importante | Disclaimer :
+Nous n'avons pas testé nos scripts dans un environnement Windows. Théoriquement, notre guide devrait suffire mais la réussite de l'éxécution n'est pas garantie.
 
-# Métrique 1 : Execution Time
+## Métrique 1 : Execution Time
 
 ## Description:
 
@@ -75,9 +77,9 @@ Ici pour tester JFreeChart, entrez le nom du script suivis des 2 arguments (lien
                         
   Assurez-vous de remplacer nom_du_fichier.html par le nom réel de votre fichier HTML et d'être sur le bon emplacement(cd).
 
-# Metrique 2: Code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
+## Metrique 2: Code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
 
-# Outil de Mesure Tache2
+## Outil de Mesure Tache2
 
 Ce projet utilise un script Python pour analyser les tests du projet JFreeChart, en particulier en testant le rapport code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
 
@@ -128,27 +130,30 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
 
 3. Telecharge le script, et projet JFreeChart sur ton ordinateur. Ils peuvent être dans des dossiers différents, comme tu veux.
   Le resource du projet JFreeChart disponible à https://github.com/jfree/jfreechart.
-  Le lien ver le script :https://github.com/mildshield14/IFT3913/blob/main/ift3913_tp2/Tp2_3913/3913tp2.py
 
-4. Entrez le réperatoire où se trouve le script dans le terminal
-    "cd path/to/your/script"
-    Example:"cd /Users/yalin/Desktop/Tp2_3913"
-5. Modifiez les autorisations des fichiers avec la commande " chmod a+x 3913tp2.py" dans votre terminal
-6. Exécutez le script avec la commande : python <nom_du_script>.py
-7. Le résultat est imprimé sous la forme suivante
+  Le lien vers le script :
+  
+     https://github.com/mildshield14/IFT3913/blob/main/ift3913_tp2/Tp2_3913/3913tp2.py
+
+5. Entrez le réperatoire où se trouve le script dans le terminal
+    `"cd path/to/your/script"`
+    Example: "cd /Users/yalin/Desktop/Tp2_3913"
+6. Modifiez les autorisations des fichiers avec la commande " chmod a+x 3913tp2.py" dans votre terminal
+7. Exécutez le script avec la commande : python <nom_du_script>.py
+8. Le résultat est imprimé sous la forme suivante
   “1: Rapport entre le code de test et le code principal: folat”
   “2:Taux de défauts: float”
   “3:Nombre moyen de lignes de cas de test: float”
-8. Un fichier "tache2_results.html" est généré et les résultats seront enregistrés dans ce fichier aussi.
-9. Vous pouvez ouvrir ce fichier dans un navigateur web pour afficher les métriques. C'est une option, parce que le résultat a été imprimé sur la console.
+9. Un fichier "tache2_results.html" est généré et les résultats seront enregistrés dans ce fichier aussi.
+10. Vous pouvez ouvrir ce fichier dans un navigateur web pour afficher les métriques. C'est une option, parce que le résultat a été imprimé sur la console.
 
 ## Dépendances
 1. Le script suppose que Maven est installé et est accessible depuis le terminal (i.e., dans le PATH).
 2. Le projet JFreeChart doit avoir une structure de répertoire standard avec src/main et src/test.
-3. Cet outil suppose que le projet JFreeChart est situé à /Users/yalin/Desktop/jfreechart-master. Vous pouvez modifier les variables src_directory et test_directory dans le script pour pointer vers votre répertoire de projet JFreeChart.
+3. Cet outil suppose que le projet JFreeChart est situé correctement. Vous pouvez modifier les variables src_directory et test_directory dans le script pour pointer vers votre répertoire de projet JFreeChart.
 
 
-# Métrique 3 : Age
+## Métrique 3 : Age
 
 ## Description:
 
@@ -173,7 +178,7 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
    1.2.2. Notez qu'une ligne bizarre apparaît dans le fichier csv il s'agit du fichier package-info.java qui n'a pas de fichier test correspondant.
 
 
-# Métrique 4 : Code Churn
+## Métrique 4 : Code Churn
 
 ## Description:
 
