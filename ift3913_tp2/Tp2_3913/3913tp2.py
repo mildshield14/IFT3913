@@ -1,4 +1,6 @@
+#！/usr/bin.env python
 import os
+from trace import CoverageResults
 
 def count_lines(directory, suffix=".java"):
     "Compter le nombre de lignes dans le fichier de suffixe spécifié"
@@ -46,6 +48,31 @@ def average_test_case_length(directory):
 avg_length = average_test_case_length(test_directory)
 print(f"3:Nombre moyen de lignes de cas de test: {avg_length:.2f}")
 
+# 4.Calculer la couverture du document de test
+# Fonction pour compter les fichiers de test
+def count_test_files(directory):
+    """
+    Compte tous les fichiers se terminant par 'Test.java' dans le répertoire spécifié.
+    """
+    test_files_count = 0
+
+    for foldername, subfolders, filenames in os.walk(directory):
+        for filename in filenames:
+            if filename.endswith('Test.java'):
+                test_files_count += 1
+
+    return test_files_count
+
+# Fonction pour calculer la couverture
+def calculate_coverage(total_requirements, total_test_files):
+    
+    coverage_percentage = (total_test_files / total_requirements) * 100
+    return coverage_percentage  # retourner le valeur de la couverture 
+
+total_test_files_count = count_test_files(test_directory)
+coverage_percentage = calculate_coverage(src_lines, total_test_files_count) 
+print(f"4:Couverture du document de test: {coverage_percentage:.2f}%")
+
  #creer un fichier html et mettre des resultats dans ce fichier
 html_document = """
 <!DOCTYPE html>
@@ -58,16 +85,17 @@ html_document = """
     <p>1: Rapport code de test/code principal: {}</p>
     <p>2: Taux de defauts: {:.2f}</p>
     <p>3: Nombre moyen de lignes de cas de test: {:.2f}</p>
+    <p>4: Couverture du document de test: {:.2f}%</p>
 </body>
 </html>
-""".format(ratio, defect_rate, avg_length)
+""".format(ratio, defect_rate, avg_length, coverage_percentage)
+
 
 #Écrire un document HTML dans un fichier
 with open("tache2_results.html", "w", encoding="utf-8") as html_file:
     html_file.write(html_document)
 
 print("Les résultats HTML sont écrits dans le fichier tache2_results.html")
-
 
 
 
