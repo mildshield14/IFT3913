@@ -47,7 +47,7 @@ Lien vers notre réponse dans le rapport dans le répositoire : `ift3913_tp2/rap
    
    1.3.1.2 Sinon, vous pouvez utiliser le absolute path en clonant notre repo git, par exemple:
    
-    cd /Users/vennilasooben/IFT3913/ift3913_tp2/analyse_metrique1
+    cd /Users/vennilasooben/IFT3913/ift3913_tp2/analyse_metrique_exectime
           
    1.3.2. Assurez-vous d'avoir les permissions en entrant sur le terminal,
    
@@ -70,7 +70,7 @@ Ici pour tester JFreeChart, entrez le nom du script suivis des 2 arguments (lien
                         
                          Sur Windows -> start nom_du_fichier.html
                          Sur macOS -> open nom_du_fichier.html
-                        Sur Linux -> xdg-open nom_du_fichier.html
+                         Sur Linux -> xdg-open nom_du_fichier.html
 
                         
   Assurez-vous de remplacer nom_du_fichier.html par le nom réel de votre fichier HTML et d'être sur le bon emplacement(cd).
@@ -146,6 +146,54 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
 1. Le script suppose que Maven est installé et est accessible depuis le terminal (i.e., dans le PATH).
 2. Le projet JFreeChart doit avoir une structure de répertoire standard avec src/main et src/test.
 3. Cet outil suppose que le projet JFreeChart est situé à /Users/yalin/Desktop/jfreechart-master. Vous pouvez modifier les variables src_directory et test_directory dans le script pour pointer vers votre répertoire de projet JFreeChart.
+
+
+# Métrique 3 : Age
+
+## Description:
+
+    - Utilisation de script python
+
+    - Entrées : Lien repo github clonable, path du dossier de tests, path du dossier source
+    
+    - Sorties : Données sauvegardées en format csv
+
+## Guide:
+ 1.1 Sur votre terminal, naviguez vers le dossier analyse_metrique_age.
+     Par exemple en clonant notre repo, le absolute path:
+
+     cd /Users/vennilasooben/IFT3913-1/ift3913_tp2/analyse_metrique_age
+
+ 1.2 Entrez la ligne suivante:
+
+     python script.py https://github.com/jfree/jfreechart.git src/test/java/org/jfree/chart/title src/main/java/org/jfree/chart/title
+
+   1.2.1 La sortie se trouve dans le dossier jfreechart qu'on a cloné dans le script
+   
+   1.2.2. Notez qu'une ligne bizarre apparaît dans le fichier csv il s'agit du fichier package-info.java qui n'a pas de fichier test correspondant.
+
+
+# Métrique 4 : Code Churn
+
+## Description:
+
+    - Utilisation de script bash
+
+    - Entrées : Lien repo github clonable, path du dossier de tests
+    
+    - Sorties : Données sauvegardées en format csv
+
+## Guide:
+ 1.1 Sur votre terminal, naviguez vers le dossier analyse_metrique_age.
+     Par exemple en clonant notre repo, le absolute path:
+
+     cd /Users/vennilasooben/IFT3913-1/ift3913_tp2/analyse_metrique_codechurn
+
+ 1.2 Entrez la ligne suivante:
+
+     ./test.sh https://github.com/jfree/jfreechart.git src/main/java/org/jfree/chart/title
+
+   1.2.1 La sortie se trouve dans le dossier appele temp_dir où on y retrouve jfreechart qu'on a cloné dans le script
 
 
 

@@ -28,7 +28,7 @@
    
    1.3.1.2 Sinon, vous pouvez utiliser le absolute path en clonant notre repo git, par exemple:
    
-    cd /Users/vennilasooben/IFT3913/ift3913_tp2/analyse_metrique1
+    cd /Users/vennilasooben/IFT3913/ift3913_tp2/analyse_metrique_exectime
           
    1.3.2. Assurez-vous d'avoir les permissions en entrant sur le terminal,
    
@@ -51,7 +51,7 @@ Ici pour tester JFreeChart, entrez le nom du script suivis des 2 arguments (lien
                         
                          Sur Windows -> start nom_du_fichier.html
                          Sur macOS -> open nom_du_fichier.html
-                        Sur Linux -> xdg-open nom_du_fichier.html
+                         Sur Linux -> xdg-open nom_du_fichier.html
 
                         
   Assurez-vous de remplacer nom_du_fichier.html par le nom réel de votre fichier HTML et d'être sur le bon emplacement(cd).
