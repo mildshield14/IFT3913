@@ -210,7 +210,7 @@ Yalin Mo (matricule: 20199655 , courriel: yalin.mo@umontreal.ca )
 
 
 Lien du repositoire : https://github.com/mildshield14/IFT3913.git
-Lien vers notre réponse à la partie 5 dans le répositoire : etude-jfreechart/reponse.txt
+Lien vers notre réponse à la partie 5 dans le répositoire : ift3913_tp1/etude-jfreechart/reponse.txt
 
 
 ## Guide d'utilisation :
