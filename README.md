@@ -1,4 +1,4 @@
-# IFT3913 par Vennila Sooben (20235256) et Yalin Mo (20199655)
+# IFT3913 TP par Vennila Sooben (20235256) et Yalin Mo (20199655)
 
 # TP2
 
