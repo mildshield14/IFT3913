@@ -1,4 +1,6 @@
 README.md
+# IFT3913_TP2 par Vennila Sooben (20235256) et Yalin Mo (20199655)
+# Date: 27 Octobre 2023
 # Outil de Mesure Tache2
 
 Ce projet utilise un script Python pour analyser les tests du projet JFreeChart, en particulier en testant le rapport code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
