@@ -15,9 +15,9 @@ Lien du repositoire : `https://github.com/mildshield14/IFT3913.git`
 Lien vers notre réponse dans le rapport dans le répositoire : `ift3913_tp2/rapport.pdf`
 
 
-# Guide d'utilisation des scripts par métriques:
+## Guide d'utilisation des scripts par métriques:
 
-# Métrique 1 : Execution Time
+## Métrique 1 : Execution Time
 
 ## Description:
 
@@ -75,9 +75,9 @@ Ici pour tester JFreeChart, entrez le nom du script suivis des 2 arguments (lien
                         
   Assurez-vous de remplacer nom_du_fichier.html par le nom réel de votre fichier HTML et d'être sur le bon emplacement(cd).
 
-# Metrique 2: Code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
+## Metrique 2: Code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
 
-# Outil de Mesure Tache2
+## Outil de Mesure Tache2
 
 Ce projet utilise un script Python pour analyser les tests du projet JFreeChart, en particulier en testant le rapport code de test/code principal, le taux de défauts des tests et la longueur moyenne des cas de test.
 
@@ -148,7 +148,7 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
 3. Cet outil suppose que le projet JFreeChart est situé à /Users/yalin/Desktop/jfreechart-master. Vous pouvez modifier les variables src_directory et test_directory dans le script pour pointer vers votre répertoire de projet JFreeChart.
 
 
-# Métrique 3 : Age
+## Métrique 3 : Age
 
 ## Description:
 
@@ -173,7 +173,7 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
    1.2.2. Notez qu'une ligne bizarre apparaît dans le fichier csv il s'agit du fichier package-info.java qui n'a pas de fichier test correspondant.
 
 
-# Métrique 4 : Code Churn
+## Métrique 4 : Code Churn
 
 ## Description:
 
