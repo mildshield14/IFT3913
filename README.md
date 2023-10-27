@@ -130,19 +130,22 @@ Nombre moyen de lignes de cas de test : Il calcule la longueur moyenne de chaque
 
 3. Telecharge le script, et projet JFreeChart sur ton ordinateur. Ils peuvent être dans des dossiers différents, comme tu veux.
   Le resource du projet JFreeChart disponible à https://github.com/jfree/jfreechart.
-  Le lien ver le script :https://github.com/mildshield14/IFT3913/blob/main/ift3913_tp2/Tp2_3913/3913tp2.py
 
-4. Entrez le réperatoire où se trouve le script dans le terminal
-    "cd path/to/your/script"
-    Example:"cd /Users/yalin/Desktop/Tp2_3913"
-5. Modifiez les autorisations des fichiers avec la commande " chmod a+x 3913tp2.py" dans votre terminal
-6. Exécutez le script avec la commande : python <nom_du_script>.py
-7. Le résultat est imprimé sous la forme suivante
+  Le lien vers le script :
+  
+     https://github.com/mildshield14/IFT3913/blob/main/ift3913_tp2/Tp2_3913/3913tp2.py
+
+5. Entrez le réperatoire où se trouve le script dans le terminal
+    `"cd path/to/your/script"`
+    Example: "cd /Users/yalin/Desktop/Tp2_3913"
+6. Modifiez les autorisations des fichiers avec la commande " chmod a+x 3913tp2.py" dans votre terminal
+7. Exécutez le script avec la commande : python <nom_du_script>.py
+8. Le résultat est imprimé sous la forme suivante
   “1: Rapport entre le code de test et le code principal: folat”
   “2:Taux de défauts: float”
   “3:Nombre moyen de lignes de cas de test: float”
-8. Un fichier "tache2_results.html" est généré et les résultats seront enregistrés dans ce fichier aussi.
-9. Vous pouvez ouvrir ce fichier dans un navigateur web pour afficher les métriques. C'est une option, parce que le résultat a été imprimé sur la console.
+9. Un fichier "tache2_results.html" est généré et les résultats seront enregistrés dans ce fichier aussi.
+10. Vous pouvez ouvrir ce fichier dans un navigateur web pour afficher les métriques. C'est une option, parce que le résultat a été imprimé sur la console.
 
 ## Dépendances
 1. Le script suppose que Maven est installé et est accessible depuis le terminal (i.e., dans le PATH).
