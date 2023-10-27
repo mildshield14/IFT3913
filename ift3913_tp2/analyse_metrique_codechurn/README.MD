@@ -16,7 +16,7 @@
 
  1.2 Entrez la ligne suivante:
 
-     ./test.sh https://github.com/jfree/jfreechart.git src/main/java/org/jfree/chart/title
+     ./script_codechurn.sh https://github.com/jfree/jfreechart.git src/main/java/org/jfree/chart/title
 
    1.2.1 La sortie se trouve dans le dossier appele temp_dir où on y retrouve jfreechart qu'on a cloné dans le script
 

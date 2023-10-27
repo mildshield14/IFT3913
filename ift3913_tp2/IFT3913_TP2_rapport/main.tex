@@ -59,7 +59,7 @@ Nous avons défini un ensemble de métriques pour chaque question, en nous basan
 \begin{itemize}
     \item Réponse 1) \textbf{Ratio test/code}
     \\Raison:
-    Nous choisissons cela car nous pouvons connaître intuitivement la proportion de code de test dans tous les fichiers de test. Un ratio élevé peut indiquer une bonne couverture des tests, un ratio faible peut indiquer que le code de test est insuffisant
+    Nous choisissons cela car nous pouvons connaître intuitivement la proportion de code de test dans tous les fichiers de test. Un ratio élevé peut indiquer une bonne couverture des tests, un ratio faible peut indiquer que le code de test est insuffisant. 
     \item Réponse 2) \textbf{Temps de cycle de test}
     \\Raison:
     Indique le temps nécessaire pour exécuter tous les tests. La longue durée d’exécution des tests peut être due à la grande quantité de code de test. Au contraire, cela peut être dû à un manque de code de test, auquel cas le test peut se terminer dans un délai très court.
@@ -128,7 +128,7 @@ Nous avons automatisé le processus de mesure en utilisant divers outils et scri
 \begin{itemize}
     \item Réponse 1) \textbf{Age} : N'a pas aboutie. Toutes les données pour les fichiers étaient quasi les mêmes (jours de commit identique). Pas de conclusion.
     \item Réponse 2) \textbf{Code Churn} : 
-Un 'code churn' élevé peut indiquer des activités de développement ou de maintenance continues, tandis qu'un 'code churn' bas peut suggérer un code stable ou dormant. Les données démontrent que certains des tests sont plus complexes car ils ont été modifiés plus de fois notamment CompositeTitleTest.java à 11 (source code one est à 9) contrairement à ImageTitleTest.java à 5(source code à 8) Dans le code, notre max est le fichier TextTitle.java à 14 et min à 7 avec ShortTextTitle.java. Les valeurs étant assez similaires des 2 côtés avec des différences de +-4, nous concluons que \textbf{les tests sont à jour avec le reste du code}
+Un 'code churn' élevé peut indiquer des activités de développement ou de maintenance continues, tandis qu'un 'code churn' bas peut suggérer un code stable ou dormant. Les données démontrent que certains des tests sont plus complexes car ils ont été modifiés plus de fois notamment CompositeTitleTest.java à 11 (source code one est à 9) contrairement à ImageTitleTest.java à 5(source code à 8) Dans le code, notre max est le fichier TextTitle.java à 14 et min à 7 avec ShortTextTitle.java. Les valeurs étant assez similaires des 2 côtés avec des différences de +-4, nous concluons que \textbf{les tests sont à jour avec le reste du code}.\\
 Résumé en image:\\
 \begin{figure}[htp]
 \includegraphics[width=8cm]{codechurn.png}
@@ -163,7 +163,7 @@ Résumé en image:\\
 \end{itemize}
 
 \section{Évaluation de la Facilité d'Analyse}
-En combinant les différentes métriques, nous avons évalué la facilité d'analyse de JFreeChart. Notre évaluation est basée sur les réponses aux questions Q1 à Q4. Nous avons utilisé une stratégie d'agrégation qui considère une réponse positive si la majorité des métriques associées à une question indique une performance satisfaisante. Cependant, malgré cette agrégation, certaines zones d'amélioration ont été identifiées.En particulier, bien que le volume de codes de test soit relativement faible pour JFreeChart, les résultats des tests sont positifs car aucun échec n'a été observé. Néanmoins, la couverture de la documentation des tests est faible, signalant un domaine d'amélioration important
+En combinant les différentes métriques, nous avons évalué la facilité d'analyse de JFreeChart. Notre évaluation est basée sur les réponses aux questions Q1 à Q4. Nous avons utilisé une stratégie d'agrégation qui considère une réponse positive si la majorité des métriques associées à une question indique une performance satisfaisante. Cependant, malgré cette agrégation, certaines zones d'amélioration ont été identifiées.En particulier, bien que le volume de codes de test soit relativement faible pour JFreeChart, les résultats des tests sont positifs car aucun échec n'a été observé. Néanmoins, la couverture de la documentation des tests est faible, signalant un domaine d'amélioration important. Aussi, JFreeChart offre de bonnes performances (pas de crash). De plus, il s'intègre facilement avec d'autres outils tels que Sonerqube. 
 
 \section{Conclusion}
 Notre évaluation de la qualité du projet JFreeChart a fourni des informations précieuses sur la facilité d'analyse du code. Certaines parties du code ont montré une bonne qualité de test et de documentation, tandis que d'autres peuvent nécessiter des améliorations. Cette évaluation offre des pistes pour l'amélioration continue du projet. En particulier, une attention accrue pourrait être accordée à la documentation du code et à la réduction du temps de réparation pour faciliter la maintenance et l'adoption du projet par de nouveaux développeurs. S'assurant que tous les tests sont pris en compte par les outils d'analyse de qualité,cela peut réduire efficacement la charge de travail. Cependant, d'un point de vue chef du projet, nous concluons que JFreeChart est facile à analyser bien que pour quelqu'un ayant plus d'expertise technique, elle reste moins simple à analyser.

@@ -16,7 +16,7 @@
 
  1.2 Entrez la ligne suivante:
 
-     python script.py https://github.com/jfree/jfreechart.git src/test/java/org/jfree/chart/title src/main/java/org/jfree/chart/title
+     python script_age.py https://github.com/jfree/jfreechart.git src/test/java/org/jfree/chart/title src/main/java/org/jfree/chart/title
 
    1.2.1 La sortie se trouve dans le dossier jfreechart qu'on a cloné dans le script
    
