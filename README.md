@@ -18,11 +18,11 @@ Note pour l'exécution des scripts:
 Pour le fichier `script_spearman.py`. vous devez modifier directement le code pour générer les valeurs de TLOC et TASSERT (WMC et TASSERT étant présents par défaut).
 
 ## Tâche 1
-Dans le rapport de tâche 1, nous avons utilisé Excel pour calculer des informations pertinents, par example le median,la limite supérieure, la limite inférieur, la longeur de boîte et ect. pour chaque liste des métriques TLOC, WMV et TASSERT. Nous avons creé les boites à moustaches pour ces trois métriques aussi sur Excel. Vous pouvez trouver tout les détails dans le lien suivant: https://github.com/mildshield14/IFT3913/tree/main/ift3913_tp3
+Dans le rapport de la tâche 1, nous avons utilisé Excel pour calculer des informations pertinentess, par example la médiane, la limite supérieure, la limite inférieur, la longeur des boîte etc pour chaque liste des métriques TLOC, WMV et TASSERT. Nous avons creé les boites à moustaches pour ces trois métriques aussi sur Excel. Vous pouvez trouver tout les détails en cliquant sur le lien suivant: https://github.com/mildshield14/IFT3913/tree/main/ift3913_tp3
 
 ## Tâche 2
 Dans le repo, vous retrouverez nos scripts pour le calcul des coefficients, la vérification de la distribution ainsi que la régression.
-Aussi présents sont des images des données obtenues par les scripts diaponibles dans le rapport mais aussi dans le dossier https://github.com/mildshield14/IFT3913/tree/main/ift3913_tp3/ift3913_TP3_rapport/images.
+Aussi présents sont des images des données obtenues par les scripts disponibles dans le rapport mais aussi dans le dossier https://github.com/mildshield14/IFT3913/tree/main/ift3913_tp3/ift3913_TP3_rapport/images.
 ### Note pour l'exécution des scripts:
 Pour le fichier `script_spearman.py`. vous devez modifier directement le code pour générer les valeurs de TLOC et TASSERT (WMC et TASSERT étant présents par défaut).
 
