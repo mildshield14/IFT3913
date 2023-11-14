@@ -16,7 +16,7 @@ Lien vers notre réponse dans le rapport dans le répositoire : `/ift3913_tp3/IF
 
 
 ## Tâche 1
-Dans le rapport de la tâche 1, nous avons utilisé Excel pour calculer des informations pertinentess, par example la médiane, la limite supérieure, la limite inférieur, la longeur des boîte etc pour chaque liste des métriques TLOC, WMV et TASSERT. Nous avons creé les boites à moustaches pour ces trois métriques aussi sur Excel. Vous pouvez trouver tout les détails en cliquant sur le lien suivant: https://github.com/mildshield14/IFT3913/tree/main/ift3913_tp3
+Dans le rapport de la tâche 1, nous avons utilisé Excel pour calculer des informations pertinentes, par example la médiane, la limite supérieure, la limite inférieur, la longeur des boîte etc pour chaque liste des métriques TLOC, WMC et TASSERT. Nous avons creé les boites à moustaches pour ces trois métriques aussi sur Excel. Vous pouvez trouver tout les détails en cliquant sur le lien suivant: https://github.com/mildshield14/IFT3913/tree/main/ift3913_tp3
 
 ## Tâche 2
 Dans le repo, vous retrouverez nos scripts pour le calcul des coefficients, la vérification de la distribution ainsi que la régression.
