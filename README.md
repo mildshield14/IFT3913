@@ -1,5 +1,30 @@
 # IFT3913 TP par Vennila Sooben (20235256) et Yalin Mo (20199655)
 
+# TP3
+
+Date de remise: 17 novembre 2023
+
+Auteurs : 
+Vennila Sooben (matricule: 20235356, courriel: vennila.sooben@umontreal.ca, github: https://github.com/mildshield14)
+
+Yalin Mo (matricule: 20199655 , courriel: yalin.mo@umontreal.ca )
+
+
+Lien du repositoire : `https://github.com/mildshield14/IFT3913.git`
+
+Lien vers notre réponse dans le rapport dans le répositoire : `/ift3913_tp3/IFT3913_TP3_rapport.pdf`
+
+Note pour l'exécution des scripts:
+Pour le fichier `script_spearman.py`. vous devez modifier directement le code pour générer les valeurs de TLOC et TASSERT (WMC et TASSERT étant présents par défaut).
+
+## Tâche 1
+
+
+## Tâche 2
+Dans le repo, vous retrouverez nos scripts pour le calcul des coefficients, la vérification de la distribution ainsi que la régression.
+Aussi présents sont des images des données obtenues par les scripts diaponibles dans le rapport mais aussi dans le dossier /ift3913_tp3/IFT3913_TP3_rapport/images.
+
+
 # TP2
 
 Date de remise: 06 octobre 2023
