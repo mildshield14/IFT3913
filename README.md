@@ -22,7 +22,7 @@ Dans le rapport de la tâche 1, nous avons utilisé Excel pour calculer des info
 
 ## Tâche 2
 Dans le repo, vous retrouverez nos scripts pour le calcul des coefficients, la vérification de la distribution ainsi que la régression.
-Aussi présents sont des images des données obtenues par les scripts disponibles dans le rapport mais aussi dans le dossier https://github.com/mildshield14/IFT3913/tree/main/ift3913_tp3/ift3913_TP3_rapport/images.
+Aussi présents sont des images des données obtenues par les scripts disponibles dans le rapport mais aussi dans le dossier https://github.com/mildshield14/IFT3913/tree/main/ift3913_tp3/IFT3913_TP3_rapport/images.
 ### Note pour l'exécution des scripts:
 Pour le fichier `script_spearman.py`. vous devez modifier directement le code pour générer les valeurs de TLOC et TASSERT (WMC et TASSERT étant présents par défaut).
 
