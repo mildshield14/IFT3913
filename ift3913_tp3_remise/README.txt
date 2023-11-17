@@ -12,7 +12,7 @@ Yalin Mo (matricule: 20199655 , courriel: yalin.mo@umontreal.ca )
 
 Lien du repositoire : https://github.com/mildshield14/IFT3913.git
 
-Lien vers notre réponse dans le rapport dans le répositoire : `/ift3913_tp3/IFT3913_TP3_rapport.pdf`
+Lien vers notre réponse dans le rapport dans le répositoire : https://github.com/mildshield14/IFT3913/blob/main/ift3913_tp3_remise/IFT3913_TP3_rapport.pdf
 
 
 ## Tâche 1
