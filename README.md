@@ -16,9 +16,8 @@ Lien vers notre réponse dans le rapport dans le répositoire : https://github.c
 
 Afin de trouver les réponses nous avons utilisé des scripts et un fichier Excel, voici les liens:
 
-    - script : https://github.com/mildshield14/IFT3913/tree/main/ift3913_tp3/checking%20normality
-
-    - fichier Excel à télécharger pour visualiser : https://github.com/mildshield14/IFT3913/blob/main/ift3913_tp3/jfreechart-test-stats-test.xltx
+- script : https://github.com/mildshield14/IFT3913/tree/main/ift3913_tp3/checking%20normality
+- fichier Excel à télécharger pour visualiser : https://github.com/mildshield14/IFT3913/blob/main/ift3913_tp3/jfreechart-test-stats-test.xltx
 
 
 ## Tâche 1
