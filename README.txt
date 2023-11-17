@@ -12,7 +12,13 @@ Yalin Mo (matricule: 20199655 , courriel: yalin.mo@umontreal.ca )
 
 Lien du repositoire : `https://github.com/mildshield14/IFT3913.git`
 
-Lien vers notre réponse dans le rapport dans le répositoire : `/ift3913_tp2/IFT3913_TP2_rapport.pdf`
+Lien vers notre réponse dans le rapport dans le répositoire : https://github.com/mildshield14/IFT3913/blob/main/ift3913_tp3_remise/IFT3913_TP3_rapport.pdf
+
+Afin de trouver les réponses nous avons utilisé des scripts et un fichier Excel, voici les liens:
+
+    - script : https://github.com/mildshield14/IFT3913/tree/main/ift3913_tp3/checking%20normality
+
+    - fichier Excel à télécharger pour visualiser : https://github.com/mildshield14/IFT3913/blob/main/ift3913_tp3/jfreechart-test-stats-test.xltx
 
 
 ## Guide d'utilisation des scripts par métriques:
