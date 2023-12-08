@@ -1,3 +1,5 @@
+package test;
+
 import currencyConverter.Currency;
 import currencyConverter.MainWindow;
 import org.junit.Test;
@@ -81,8 +83,9 @@ public class Method1_tests {
      @Test
     public void testInvalid() {
         // Test with an invalid amount > boundaries value
-        Double result = MainWindow.convert("USD", "EUR", currencies, 1000001.0);
-        assertEquals(928840.93, result, 0.01);
+        assertThrows("La conversion devrait échouer pour les montants dépassant la limite maximale",IllegalArgumentException.class,
+                () -> MainWindow.convert("USD", "EUR", currencies, 1000001.0)
+                );
     }
 
 }

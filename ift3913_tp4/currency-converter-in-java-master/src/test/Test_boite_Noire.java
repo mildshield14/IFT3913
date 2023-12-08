@@ -1,17 +1,18 @@
 package test;
 
 import currencyConverter.Currency;
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 import java.util.ArrayList;
 import java.util.HashMap;
+
 public class Test_boite_Noire {
 
     private static ArrayList<Currency> currencies;
     private static HashMap<String, Double> exchangeRates;
-    @BeforeAll
-    public static void setUp() {
+    @Before
+    public void setUp() {
         currencies = Currency.init();
         // Prendre les taux de change de l'USD
         exchangeRates = currencies.stream()
@@ -30,9 +31,8 @@ public class Test_boite_Noire {
 
         // Ici, nous choisissons le taux d'exchange pour convertir EUR en JPY
         double exchangeRate = currencies.get(2).getExchangeValues().get("JPY");
-        assertThrows(IllegalArgumentException.class,
-                () -> Currency.convert(amount, exchangeRate),
-                "La conversion d'un montant négatif devrait lancer IllegalArgumentException");
+        assertThrows("La conversion d'un montant négatif devrait lancer IllegalArgumentException",IllegalArgumentException.class,
+                () -> Currency.convert(amount, exchangeRate));
     }
     @Test
     public void testCurrencyConvertAboveUpperBoundary() {
@@ -41,9 +41,8 @@ public class Test_boite_Noire {
 
         // Ici, nous choisissons le taux d'exchange pour convertir Swiss Franc en Chinese Yuan Renminbi
         double exchangeRate = currencies.get(3).getExchangeValues().get("CNY");
-        assertThrows(IllegalArgumentException.class,
-                () -> Currency.convert(amount, exchangeRate),
-                "La conversion au-dessus de la limite supérieure devrait lancer IllegalArgumentException");}
+        assertThrows("La conversion au-dessus de la limite supérieure devrait lancer IllegalArgumentException",IllegalArgumentException.class,
+                () -> Currency.convert(amount, exchangeRate));}
 
     // Testons les montants entre l'intervalle [0,1 000 000]
     @Test
@@ -54,7 +53,7 @@ public class Test_boite_Noire {
         // Ici, nous choisissons le taux d'exchange pour convertir Euro en USD
         double exchangeRate = currencies.get(1).getExchangeValues().get("USD");
         double result = Currency.convert(amount, exchangeRate);
-        assertEquals(0.00, result, "La conversion à la limite inférieure doit être 0");
+        assertEquals(0.00, result, 0.01);
     }
 
     @Test
@@ -66,7 +65,7 @@ public class Test_boite_Noire {
         double exchangeRate = currencies.get(1).getExchangeValues().get("CHF");
         double expected = Math.round(amount * exchangeRate * 100.0) / 100.0; // Valeur attendue après la conversion
         double result = Currency.convert(amount, exchangeRate); // valeur réelle attendue après la conversion
-        assertEquals(expected, result, "La conversion du montant typique doit être correcte et correspondre à la valeur attendue");
+        assertEquals(expected, result, 0.01);
     }
 
     @Test
@@ -82,7 +81,7 @@ public class Test_boite_Noire {
 
         // valeur réelle attendue après la conversion
         double result = Currency.convert(amount, exchangeRate);
-        assertEquals(expected, result, "La conversion à la limite supérieure doit être correcte et correspondre à la valeur attendue");
+        assertEquals(expected, result, 0.01);
     }
 
     // Test de classe d'équivalence
@@ -92,7 +91,7 @@ public class Test_boite_Noire {
         double exchangeRate = exchangeRates.get("JPY"); // Taux de change USD vers JPY
         double expected = Math.round(amount * exchangeRate * 100d) / 100d; // Résultat de conversion attendu
         double actual = Currency.convert(amount, exchangeRate); // Résultat de conversion réel
-        assertEquals(expected, actual, "La conversion doit être correcte pour un montant compris dans la plage valide.");
+        assertEquals(expected, actual, 0.01);
     }
 
     // Test de classe d'équivalence invalide: montants inférieurs à 0
@@ -101,9 +100,9 @@ public class Test_boite_Noire {
         double amount = -1.00; // Montant invalide (inférieur à 0)
         double exchangeRate = exchangeRates.get("CHF"); // USD to CHF exchange rate
         // Assuming convert should return null or throw an exception for invalid input
-        assertThrows(IllegalArgumentException.class,
-                () -> Currency.convert(amount, exchangeRate),
-                "La conversion devrait échouer pour les montants négatifs.");
+        assertThrows("La conversion devrait échouer pour les montants négatifs.",IllegalArgumentException.class,
+                () -> Currency.convert(amount, exchangeRate)
+                );
     }
 
     // Test de classe d'équivalence invalide : montants supérieurs à 1000000
@@ -112,9 +111,9 @@ public class Test_boite_Noire {
         double amount = 1000000.01;
         double exchangeRate = exchangeRates.get("GBP"); // Taux de change USD vers GBP
         // En supposant que convert doive renvoyer null ou lever une exception pour une entrée non valide
-        assertThrows(IllegalArgumentException.class,
-                () -> Currency.convert(amount, exchangeRate),
-                "La conversion devrait échouer pour les montants dépassant la limite maximale");
+        assertThrows("La conversion devrait échouer pour les montants dépassant la limite maximale",IllegalArgumentException.class,
+                () -> Currency.convert(amount, exchangeRate)
+                );
     }
 }
 
