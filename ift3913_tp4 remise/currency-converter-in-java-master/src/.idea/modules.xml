@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/currency-converter-in-java-master.iml" filepath="$PROJECT_DIR$/currency-converter-in-java-master.iml" />
+    </modules>
+  </component>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version> <!-- Replace with the latest version available -->
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
+
