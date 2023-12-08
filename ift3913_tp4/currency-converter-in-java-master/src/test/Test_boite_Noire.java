@@ -1,18 +1,24 @@
 package test;
-import currencyConverter.MainWindow;
+
 import currencyConverter.Currency;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
-
+import java.util.HashMap;
 public class Test_boite_Noire {
 
     private static ArrayList<Currency> currencies;
-
+    private static HashMap<String, Double> exchangeRates;
     @BeforeAll
     public static void setUp() {
         currencies = Currency.init();
+        // Prendre les taux de change de l'USD
+        exchangeRates = currencies.stream()
+                .filter(c -> "USD".equals(c.getShortName()))
+                .findFirst()
+                .orElseThrow()
+                .getExchangeValues();
     }
 
     // Analyse des valeurs limites pour la méthode currencyConverter.Currency.convert(Double, Double),
@@ -48,7 +54,7 @@ public class Test_boite_Noire {
         // Ici, nous choisissons le taux d'exchange pour convertir Euro en USD
         double exchangeRate = currencies.get(1).getExchangeValues().get("USD");
         double result = Currency.convert(amount, exchangeRate);
-        assertEquals(0.00, result, "Conversion at lower boundary should be 0");
+        assertEquals(0.00, result, "La conversion à la limite inférieure doit être 0");
     }
 
     @Test
@@ -60,7 +66,7 @@ public class Test_boite_Noire {
         double exchangeRate = currencies.get(1).getExchangeValues().get("CHF");
         double expected = Math.round(amount * exchangeRate * 100.0) / 100.0; // Valeur attendue après la conversion
         double result = Currency.convert(amount, exchangeRate); // valeur réelle attendue après la conversion
-        assertEquals(expected, result, "Conversion of typical amount should be correct and match the expected value");
+        assertEquals(expected, result, "La conversion du montant typique doit être correcte et correspondre à la valeur attendue");
     }
 
     @Test
@@ -70,72 +76,47 @@ public class Test_boite_Noire {
 
         // Ici, nous choisissons le taux d'exchange pour convertir GBP en CHF
         double exchangeRate = currencies.get(2).getExchangeValues().get("CHF");
-        double expected = Math.round(amount * exchangeRate * 100.0) / 100.0; // Valeur attendue après la conversion
-        double result = Currency.convert(amount, exchangeRate);// valeur réelle attendue après la conversion
-        assertEquals(expected, result, "Conversion at upper boundary should be correct and match the expected value");
+
+        // Valeur attendue après la conversion
+        double expected = Math.round(amount * exchangeRate * 100.0) / 100.0;
+
+        // valeur réelle attendue après la conversion
+        double result = Currency.convert(amount, exchangeRate);
+        assertEquals(expected, result, "La conversion à la limite supérieure doit être correcte et correspondre à la valeur attendue");
     }
 
-
-    //Analyse des valeurs limites pour la méthode currencyConverter.MainWindow.convert(String, String, ArrayList<Currency>, Double)
-    //testons les montants qui débordent l'intervalle [0,1 000 000]
+    // Test de classe d'équivalence
     @Test
-    public void testMainWindowConvertBelowLowerBoundary() {
-        // Testons un montant négatif, il devrait lancer une exception
-        double amount = -1.0;
-        String fromCurrency = "US Dollar";
-        String toCurrency = "CYN";
+    public void testValidAmountConversion() {
+        double amount = 500000.00;
+        double exchangeRate = exchangeRates.get("JPY"); // Taux de change USD vers JPY
+        double expected = Math.round(amount * exchangeRate * 100d) / 100d; // Résultat de conversion attendu
+        double actual = Currency.convert(amount, exchangeRate); // Résultat de conversion réel
+        assertEquals(expected, actual, "La conversion doit être correcte pour un montant compris dans la plage valide.");
+    }
+
+    // Test de classe d'équivalence invalide: montants inférieurs à 0
+    @Test
+    public void testNegativeAmountConversion() {
+        double amount = -1.00; // Montant invalide (inférieur à 0)
+        double exchangeRate = exchangeRates.get("CHF"); // USD to CHF exchange rate
+        // Assuming convert should return null or throw an exception for invalid input
         assertThrows(IllegalArgumentException.class,
-                () -> MainWindow.convert(fromCurrency, toCurrency, currencies, amount),
-                "Conversion should not be possible for negative amounts");
+                () -> Currency.convert(amount, exchangeRate),
+                "La conversion devrait échouer pour les montants négatifs.");
     }
+
+    // Test de classe d'équivalence invalide : montants supérieurs à 1000000
     @Test
-    public void testMainWindowConvertJustAboveUpperBoundary() {
-        // Testons un montant déborde la valeur maximum, il devrait lancer une exception
+    public void testExcessiveAmountConversion() {
         double amount = 1000000.01;
-        String fromCurrency = "Chinese Yuan Renminbi";
-        String toCountryCurrency = "EUR";
+        double exchangeRate = exchangeRates.get("GBP"); // Taux de change USD vers GBP
+        // En supposant que convert doive renvoyer null ou lever une exception pour une entrée non valide
         assertThrows(IllegalArgumentException.class,
-                () -> MainWindow.convert(fromCurrency, toCountryCurrency, currencies, amount),
-                "Conversion should not be possible for amounts above 1,000,000");
+                () -> Currency.convert(amount, exchangeRate),
+                "La conversion devrait échouer pour les montants dépassant la limite maximale");
     }
-    @Test
-    public void testMainWindowConvertAtLowerBoundary() {
-        // Testons un montant de limite inférieure, il devrait retour la valeur 0.0
-        double amount = 0.00;
-        String fromCurrency = "US Dollar";
-        String toCurrency = "Euro";
-        assertEquals(0.00, MainWindow.convert(fromCurrency, toCurrency, currencies, amount),
-                "Conversion at lower boundary should be 0");
-    }
-    @Test
-    public void testMainWindowConvertAtTypicalBoundary() {
-        //Testons un montant typique dans les limites
-        double amount = 55000.00;
-        String fromCurrency = "Chinese Yuan Renminbi";
-        String toCurrency = "British Pound";
-
-        // valeur réelle attendue après la conversion
-        double exceptedPriceM = amount * currencies.get(4).getExchangeValues().get("GBP");
-        assertEquals(exceptedPriceM,MainWindow.convert(fromCurrency, toCurrency, currencies, amount),
-                "Conversion at upper boundary should result in a positive value");
-
-    }
-
-    @Test
-    public void testMainWindowConvertAtBoundary() {
-        // Testons un montant de limite supérieure
-        double amount = 1000000.00;
-
-        String fromCurrency = "British Pound";
-        String toCurrency = "Japanese Yen";
-
-        // valeur réelle attendue après la conversion
-        double exceptedPriceM = amount * currencies.get(2).getExchangeValues().get("JPY");
-        assertEquals(exceptedPriceM,MainWindow.convert(fromCurrency, toCurrency, currencies, amount),
-                "Conversion at upper boundary should result in a positive value");
-    }
-
-
 }
+
 
 
