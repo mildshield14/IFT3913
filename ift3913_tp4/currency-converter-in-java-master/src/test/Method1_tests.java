@@ -6,17 +6,54 @@ import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
 
+import java.beans.Transient;
 import java.util.ArrayList;
 
 public class Method1_tests {
-
+    private ArrayList<String> names;
     private ArrayList<Currency> currencies;
 
     @Before
     public void init(){
         // Create test data;
-        currencies=currencyConverter.Currency.init();
+        currencies=Currency.init();
+
+        names = new ArrayList<>();
+
+        for (int i=0;i<currencies.size();i++){
+            names.add(currencies.get(i).getShortName());
+        }
         
+    }
+
+    @Test
+    public void testNameUSD(){
+        assertEquals(names.contains("USD"),true);
+    }
+
+    @Test
+    public void testNameCAD(){
+        assertEquals(names.contains("CAD"),true);
+    }
+
+     @Test
+    public void testNameEUR(){
+        assertEquals(names.contains("EUR"),true);
+    }
+
+     @Test
+    public void testNameCHF(){
+        assertEquals(names.contains("CHF"),true);
+    }
+
+     @Test
+    public void testNameAUD(){
+        assertEquals(names.contains("AUD"),true);
+    }
+
+     @Test
+    public void testInvalidCurrencyXXX(){
+        assertEquals(names.contains("XXX"),false);
     }
 
     @Test
@@ -63,17 +100,22 @@ public class Method1_tests {
         // Test with an invalid amount
         Double result = MainWindow.convert("USD", "EUR", currencies, -100.0);
         assertEquals(0.0, result, 0.01);
+
     }
 
     @Test
-    public void testBoundaries() {
+    public void testBoundariesLower() {
 
-        // Test with boundary values [0,1000000]
+        // Test with boundary values [0,1000000] here 0
         Double result = MainWindow.convert("USD", "EUR", currencies, 0.0);
         assertEquals(0.0, result, 0.0);
 
-        Double result2 = MainWindow.convert("USD", "EUR", currencies, 0.0);
-        assertEquals(0.0, result2, 0.0);
+    }
+
+     @Test
+    public void testBoundariesUpper() {
+
+        // Test with boundary values [0,1000000] here 1000000
         
         Double result3 = MainWindow.convert("USD", "EUR", currencies, 1000000.0);
         assertEquals(1000000, result3, 0.0);
@@ -81,10 +123,17 @@ public class Method1_tests {
     }
 
      @Test
-    public void testInvalid() {
+    public void testInvalidUpper() {
         // Test with an invalid amount > boundaries value
         assertThrows("La conversion devrait échouer pour les montants dépassant la limite maximale",IllegalArgumentException.class,
-                () -> MainWindow.convert("USD", "EUR", currencies, 1000001.0)
+                () -> MainWindow.convert("USD", "EUR", currencies, 1000000.01)
+                );
+    }
+
+    @Test
+    public void testInvalidLower() {
+        assertThrows("La conversion devrait échouer pour les montants dépassant la limite maximale",IllegalArgumentException.class,
+                () -> MainWindow.convert("USD", "EUR", currencies, -0.01)
                 );
     }
 
